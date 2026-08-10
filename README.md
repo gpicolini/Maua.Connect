@@ -65,9 +65,9 @@ Construir uma plataforma web que permita:
 ---
 
 
-## 🧠 Como estamos pensando o sistema
+##  Como fica o que cada um faz
 
-A gente vai dividir o projeto, em sua maioria do tempo, assim:
+A gente vai dividir o projeto, na maioria do tempo, assim:
 
 
 ### Front-end - Gui, Pattaro, Surdo e Ulliana
@@ -227,7 +227,7 @@ E pronto, ele sobe aqui no git hub
 ---
 
 
-## 🌿 Git e organização
+## Git e organização
 
 Não deem git, direito na main, pq pode dar merda.. quando for trabalhar, da git branch.. pq ai vc meio que cria uma segunda linha do código.. depois que tudo tiver pronto, vc junta essa segunda linha com a primeira. Assim ninguém faz merda.
 
@@ -262,7 +262,7 @@ Fluxo básico:
 
 ---
 
-## 📝 Commits
+## Commits
 
 Não precisa escrever uma redação.
 
