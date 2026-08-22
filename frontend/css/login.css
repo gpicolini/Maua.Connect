@@ -140,6 +140,7 @@ transform: translateY(7px);
 }
 
 .opcoesLogin {
+position: relative;
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -190,6 +191,28 @@ cursor: pointer;
 
 .esqueceuSenhaBotao:hover {
 color: white;
+text-decoration: underline;
+}
+
+.linkCadastro {
+display: inline-flex;
+align-items: center;
+margin: 0;
+position: absolute;
+left: 48%;
+transform: translateX(-50%);
+color: white;
+font-family: "Sora", sans-serif;
+font-size: 13px;
+font-weight: 400;
+line-height: 1;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
+}
+
+.linkCadastro:hover,
+.linkCadastro:focus-visible {
 text-decoration: underline;
 }
 
