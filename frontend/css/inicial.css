@@ -1,0 +1,668 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Sora", sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+.background {
+min-height: 100vh;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding: 20px 40px;
+align-items: stretch;
+background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.cabecalho {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 8px 4px 18px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.identidade {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.logos {
+display: flex;
+align-items: center;
+gap: 18px;
+}
+
+.logos img {
+width: auto;
+height: 48px;
+object-fit: contain;
+}
+
+.logos .logoAacd {
+width: 155px;
+}
+
+.logos .logoMaua {
+width: 125px;
+}
+
+.divisor {
+width: 1px;
+height: 35px;
+background: rgba(255, 255, 255, 0.6);
+}
+
+.nomeProjeto {
+display: flex;
+flex-direction: column;
+gap: 3px;
+color: white;
+}
+
+.nomeProjeto strong {
+font-size: 18px;
+}
+
+.nomeProjeto span {
+font-size: 10px;
+color: rgba(255, 255, 255, 0.75);
+}
+
+.menuPrincipal {
+display: flex;
+align-items: center;
+gap: 28px;
+margin-left: auto;
+margin-right: 34px;
+}
+
+.menuPrincipal a {
+position: relative;
+padding: 10px 0;
+color: rgba(255, 255, 255, 0.82);
+font-size: 12px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.menuPrincipal a::after {
+position: absolute;
+left: 0;
+bottom: 3px;
+width: 0;
+height: 2px;
+background: white;
+content: "";
+transition: width 0.2s;
+}
+
+.menuPrincipal a:hover::after {
+width: 100%;
+}
+
+.opcoesCabecalho {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.botaoEntrar,
+.botaoCadastrar {
+padding: 10px 20px;
+border: 1px solid white;
+border-radius: 10px;
+text-decoration: none;
+font-size: 13px;
+font-weight: 600;
+}
+
+.botaoEntrar {
+color: white;
+}
+
+.botaoEntrar:hover {
+background: rgba(255, 255, 255, 0.18);
+}
+
+.botaoCadastrar {
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.botaoCadastrar:hover {
+color: red;
+background: white
+}
+
+.conteudoInicial {
+position: relative;
+width: 100%;
+height: 440px;
+display: flex;
+align-items: stretch;
+margin-top: 22px;
+overflow: hidden;
+background: #42010b;
+border: 1px solid rgba(255, 255, 255, 0.4);
+border-radius: 20px;
+}
+
+.textoDestaque {
+position: relative;
+z-index: 2;
+order: 2;
+width: 36%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+padding: 38px;
+}
+
+.etiquetaDestaque {
+padding: 7px 12px;
+color: white;
+background: rgba(255, 255, 255, 0.14);
+border: 1px solid rgba(255, 255, 255, 0.28);
+border-radius: 20px;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.textoDestaque h1 {
+max-width: 680px;
+margin: 20px 0 16px;
+color: white;
+font-size: clamp(28px, 2.8vw, 42px);
+line-height: 1.08;
+letter-spacing: -1.5px;
+}
+
+.textoDestaque p {
+max-width: 630px;
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 13px;
+line-height: 1.6;
+}
+
+.botaoDestaque {
+margin-top: 26px;
+padding: 13px 22px;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: none;
+border-radius: 10px;
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+transition: transform 0.2s;
+border: 1px solid white;
+}
+
+.botaoDestaque:hover {
+transform: translateY(-2px);
+}
+
+.informacaoDestaque {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 28px;
+color: white;
+font-size: 12px;
+font-weight: 600;
+}
+
+.pontoDestaque {
+width: 10px;
+height: 10px;
+background: #d9253f;
+border: 2px solid #f7a0ad;
+border-radius: 50%;
+box-shadow: 0 0 0 4px rgba(217, 37, 63, 0.1);
+}
+
+.fotoCrianca {
+position: relative;
+order: 1;
+width: 64%;
+height: 100%;
+overflow: hidden;
+}
+
+.imagemCarrossel {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+object-position: center 10%;
+opacity: 0;
+transition: opacity 0.45s ease;
+}
+
+.imagemCarrossel.ativa {
+opacity: 1;
+}
+
+.setaCarrossel {
+position: absolute;
+top: 50%;
+z-index: 2;
+width: 42px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+background: rgba(0, 0, 0, 0.45);
+border: 1px solid rgba(255, 255, 255, 0.75);
+border-radius: 50%;
+font-size: 18px;
+cursor: pointer;
+transform: translateY(-50%);
+transition: background 0.2s;
+}
+
+.setaCarrossel:hover {
+background: rgba(0, 0, 0, 0.7);
+}
+
+.setaAnterior {
+left: 16px;
+}
+
+.setaProxima {
+right: 16px;
+}
+
+.indicadoresCarrossel {
+position: absolute;
+bottom: 16px;
+left: 50%;
+z-index: 2;
+display: flex;
+gap: 8px;
+transform: translateX(-50%);
+}
+
+.indicadorCarrossel {
+width: 9px;
+height: 9px;
+padding: 0;
+background: rgba(255, 255, 255, 0.5);
+border: none;
+border-radius: 50%;
+cursor: pointer;
+transition: width 0.2s, background 0.2s;
+}
+
+.indicadorCarrossel.ativo {
+width: 24px;
+background: white;
+border-radius: 8px;
+}
+
+.historiaAacd {
+width: 100%;
+margin-top: 22px;
+padding: 70px 18px 52px;
+}
+
+.tituloHistoria {
+max-width: 700px;
+margin: 0 auto 46px;
+color: white;
+text-align: center;
+}
+
+.tituloHistoria > span {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.tituloHistoria h2 {
+margin: 8px 0;
+font-size: 32px;
+letter-spacing: -1px;
+}
+
+.tituloHistoria p {
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 13px;
+line-height: 1.6;
+}
+
+.linhaTempoHistoria {
+position: relative;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 0;
+}
+
+.marcoHistoria {
+position: relative;
+z-index: 1;
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+padding: 0 32px;
+text-align: center;
+}
+
+.anoHistoria {
+width: 56px;
+height: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 4px solid rgba(255, 255, 255, 0.9);
+border-radius: 50%;
+font-size: 13px;
+font-weight: 700;
+}
+
+.textoHistoria h3 {
+margin: 0 0 10px;
+color: white;
+font-size: 17px;
+line-height: 1.35;
+}
+
+.textoHistoria p {
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 12px;
+line-height: 1.65;
+}
+
+.linkHistoria {
+width: fit-content;
+display: block;
+margin: 34px auto 0;
+padding-bottom: 4px;
+color: white;
+border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+}
+
+.linkHistoria:hover {
+border-bottom-color: white;
+}
+
+.dentroPlataforma {
+width: 100%;
+padding: 72px 18px 68px;
+color: white;
+}
+
+.tituloPlataforma {
+max-width: 720px;
+margin-bottom: 34px;
+}
+
+.tituloPlataforma > span,
+.legendaPlataforma > span {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.tituloPlataforma h2 {
+margin: 8px 0;
+font-size: clamp(30px, 4vw, 46px);
+letter-spacing: -1.5px;
+}
+
+.tituloPlataforma p {
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 13px;
+line-height: 1.6;
+}
+
+.conteudoPlataforma {
+display: grid;
+grid-template-columns: minmax(0, 1.55fr) minmax(310px, 0.8fr);
+gap: 42px;
+align-items: stretch;
+}
+
+.destaquePlataforma {
+position: relative;
+min-height: 430px;
+overflow: hidden;
+}
+
+.destaquePlataforma::after {
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, transparent 35%, rgba(25, 0, 4, 0.92) 100%);
+content: "";
+}
+
+.destaquePlataforma img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+}
+
+.legendaPlataforma {
+position: absolute;
+right: 30px;
+bottom: 28px;
+left: 30px;
+z-index: 1;
+}
+
+.legendaPlataforma h3 {
+max-width: 680px;
+margin: 9px 0 0;
+font-size: clamp(21px, 2.5vw, 32px);
+line-height: 1.2;
+letter-spacing: -0.7px;
+}
+
+.listaPlataforma {
+border-top: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.itemPlataforma {
+display: grid;
+grid-template-columns: 38px 1fr;
+gap: 18px;
+padding: 28px 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.itemPlataforma > span {
+padding-top: 3px;
+color: rgba(255, 255, 255, 0.68);
+font-size: 11px;
+font-weight: 700;
+}
+
+.itemPlataforma h3 {
+margin: 0 0 9px;
+font-size: 17px;
+}
+
+.itemPlataforma p {
+margin: 0;
+color: rgba(255, 255, 255, 0.75);
+font-size: 12px;
+line-height: 1.65;
+}
+
+.rodape {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 30px 4px 14px;
+color: white;
+border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.linksRodape {
+display: flex;
+gap: 24px;
+}
+
+.linksRodape a {
+color: rgba(255, 255, 255, 0.82);
+font-size: 11px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.linksRodape a:hover {
+color: white;
+}
+
+
+@media (max-width: 1050px) {
+.nomeProjeto {
+display: none;
+}
+
+.menuPrincipal {
+margin-right: 20px;
+gap: 18px;
+}
+}
+
+@media (max-width: 850px) {
+.background {
+padding: 15px;
+}
+
+.cabecalho {
+padding: 12px;
+}
+
+.nomeProjeto {
+display: none;
+}
+
+.menuPrincipal {
+display: none;
+}
+
+.logos img {
+height: 40px;
+}
+
+.logos .logoAacd {
+width: 118px;
+}
+
+.logos .logoMaua {
+width: 92px;
+}
+
+.botaoEntrar,
+.botaoCadastrar {
+padding: 9px 12px;
+font-size: 11px;
+}
+
+.conteudoInicial {
+min-height: auto;
+height: auto;
+flex-direction: column;
+}
+
+.textoDestaque,
+.fotoCrianca {
+width: 100%;
+}
+
+.textoDestaque {
+padding: 35px 25px;
+}
+
+.textoDestaque h1 {
+font-size: 34px;
+letter-spacing: -1px;
+}
+
+.fotoCrianca {
+position: relative;
+height: 300px;
+}
+
+.historiaAacd {
+padding: 30px 20px;
+}
+
+.tituloHistoria h2 {
+font-size: 27px;
+}
+
+.linhaTempoHistoria {
+display: flex;
+flex-direction: column;
+gap: 34px;
+}
+
+.marcoHistoria {
+width: 100%;
+min-height: auto;
+padding: 0;
+}
+
+.dentroPlataforma {
+padding: 42px 20px 35px;
+}
+
+.conteudoPlataforma {
+grid-template-columns: 1fr;
+gap: 28px;
+}
+
+.destaquePlataforma {
+min-height: 330px;
+}
+
+.legendaPlataforma {
+right: 22px;
+bottom: 22px;
+left: 22px;
+}
+
+.rodape {
+padding: 28px 4px 10px;
+}
+
+.linksRodape {
+flex-wrap: wrap;
+gap: 12px 20px;
+}
+
+}
