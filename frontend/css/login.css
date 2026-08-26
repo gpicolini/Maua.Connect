@@ -7,10 +7,10 @@ margin: 0;
 }
 
 .background {
-height: 100%;
+min-height: 100vh;
 width: 100%;
 display: flex;
-justify-content: flex-end;
+justify-content: center;
 padding: 40px;
 align-items: center;
 background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
