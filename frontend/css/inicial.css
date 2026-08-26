@@ -1,3 +1,5 @@
+
+
 * {
 box-sizing: border-box;
 }
@@ -213,7 +215,7 @@ transition: transform 0.2s;
 border: 1px solid white;
 }
 
-.botaoDestaque:hover {
+.botaoDestaque:hover { /*isso aq faz o botao subir, mo chave*/
 transform: translateY(-2px);
 }
 
@@ -244,78 +246,87 @@ height: 100%;
 overflow: hidden;
 }
 
-.imagemCarrossel {
-position: absolute;
-inset: 0;
+.fotoCrianca img {
 width: 100%;
 height: 100%;
 display: block;
 object-fit: cover;
 object-position: center 10%;
-opacity: 0;
-transition: opacity 0.45s ease;
 }
 
-.imagemCarrossel.ativa {
-opacity: 1;
-}
-
-.setaCarrossel {
-position: absolute;
-top: 50%;
-z-index: 2;
-width: 42px;
-height: 42px;
-display: flex;
-align-items: center;
-justify-content: center;
+.sobreProjeto {
+width: 100%;
+display: grid;
+grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+gap: 70px;
+align-items: start;
+padding: 85px 70px;
 color: white;
-background: rgba(0, 0, 0, 0.45);
-border: 1px solid rgba(255, 255, 255, 0.75);
-border-radius: 50%;
-font-size: 18px;
-cursor: pointer;
-transform: translateY(-50%);
-transition: background 0.2s;
 }
 
-.setaCarrossel:hover {
-background: rgba(0, 0, 0, 0.7);
+.tituloSobreProjeto > span {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
-.setaAnterior {
-left: 16px;
+.tituloSobreProjeto h2 {
+max-width: 720px;
+margin: 12px 0 0;
+font-size: clamp(32px, 4vw, 52px);
+line-height: 1.12;
+letter-spacing: -1.8px;
 }
 
-.setaProxima {
-right: 16px;
+.conteudoSobreProjeto {
+padding-top: 23px;
+border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.indicadoresCarrossel {
-position: absolute;
-bottom: 16px;
-left: 50%;
-z-index: 2;
+.conteudoSobreProjeto > p {
+margin: 0;
+color: rgba(255, 255, 255, 0.82);
+font-size: 14px;
+line-height: 1.8;
+}
+
+.destaqueSobreProjeto {
 display: flex;
-gap: 8px;
-transform: translateX(-50%);
+flex-direction: column;
+gap: 7px;
+margin-top: 28px;
+padding-left: 18px;
+border-left: 3px solid white;
 }
 
-.indicadorCarrossel {
-width: 9px;
-height: 9px;
-padding: 0;
-background: rgba(255, 255, 255, 0.5);
-border: none;
-border-radius: 50%;
-cursor: pointer;
-transition: width 0.2s, background 0.2s;
+.destaqueSobreProjeto strong {
+font-size: 15px;
 }
 
-.indicadorCarrossel.ativo {
-width: 24px;
-background: white;
-border-radius: 8px;
+.destaqueSobreProjeto span {
+color: rgba(255, 255, 255, 0.72);
+font-size: 11px;
+line-height: 1.6;
+}
+
+.linkSobreProjeto {
+width: fit-content;
+display: block;
+margin-top: 28px;
+padding: 12px 20px;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid white;
+border-radius: 10px;
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+transition: transform 0.2s;
+}
+
+.linkSobreProjeto:hover { /*isso aq faz o botao subir*/
+transform: translateY(-2px);
 }
 
 .historiaAacd {
@@ -411,112 +422,6 @@ text-decoration: none;
 
 .linkHistoria:hover {
 border-bottom-color: white;
-}
-
-.dentroPlataforma {
-width: 100%;
-padding: 72px 18px 68px;
-color: white;
-}
-
-.tituloPlataforma {
-max-width: 720px;
-margin-bottom: 34px;
-}
-
-.tituloPlataforma > span,
-.legendaPlataforma > span {
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.tituloPlataforma h2 {
-margin: 8px 0;
-font-size: clamp(30px, 4vw, 46px);
-letter-spacing: -1.5px;
-}
-
-.tituloPlataforma p {
-margin: 0;
-color: rgba(255, 255, 255, 0.78);
-font-size: 13px;
-line-height: 1.6;
-}
-
-.conteudoPlataforma {
-display: grid;
-grid-template-columns: minmax(0, 1.55fr) minmax(310px, 0.8fr);
-gap: 42px;
-align-items: stretch;
-}
-
-.destaquePlataforma {
-position: relative;
-min-height: 430px;
-overflow: hidden;
-}
-
-.destaquePlataforma::after {
-position: absolute;
-inset: 0;
-background: linear-gradient(180deg, transparent 35%, rgba(25, 0, 4, 0.92) 100%);
-content: "";
-}
-
-.destaquePlataforma img {
-width: 100%;
-height: 100%;
-display: block;
-object-fit: cover;
-}
-
-.legendaPlataforma {
-position: absolute;
-right: 30px;
-bottom: 28px;
-left: 30px;
-z-index: 1;
-}
-
-.legendaPlataforma h3 {
-max-width: 680px;
-margin: 9px 0 0;
-font-size: clamp(21px, 2.5vw, 32px);
-line-height: 1.2;
-letter-spacing: -0.7px;
-}
-
-.listaPlataforma {
-border-top: 1px solid rgba(255, 255, 255, 0.48);
-}
-
-.itemPlataforma {
-display: grid;
-grid-template-columns: 38px 1fr;
-gap: 18px;
-padding: 28px 0;
-border-bottom: 1px solid rgba(255, 255, 255, 0.48);
-}
-
-.itemPlataforma > span {
-padding-top: 3px;
-color: rgba(255, 255, 255, 0.68);
-font-size: 11px;
-font-weight: 700;
-}
-
-.itemPlataforma h3 {
-margin: 0 0 9px;
-font-size: 17px;
-}
-
-.itemPlataforma p {
-margin: 0;
-color: rgba(255, 255, 255, 0.75);
-font-size: 12px;
-line-height: 1.65;
 }
 
 .rodape {
@@ -617,6 +522,21 @@ position: relative;
 height: 300px;
 }
 
+.sobreProjeto {
+grid-template-columns: 1fr;
+gap: 30px;
+padding: 55px 25px;
+}
+
+.tituloSobreProjeto h2 {
+font-size: 32px;
+letter-spacing: -1px;
+}
+
+.conteudoSobreProjeto {
+padding-top: 20px;
+}
+
 .historiaAacd {
 padding: 30px 20px;
 }
@@ -635,25 +555,6 @@ gap: 34px;
 width: 100%;
 min-height: auto;
 padding: 0;
-}
-
-.dentroPlataforma {
-padding: 42px 20px 35px;
-}
-
-.conteudoPlataforma {
-grid-template-columns: 1fr;
-gap: 28px;
-}
-
-.destaquePlataforma {
-min-height: 330px;
-}
-
-.legendaPlataforma {
-right: 22px;
-bottom: 22px;
-left: 22px;
 }
 
 .rodape {
