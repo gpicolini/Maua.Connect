@@ -127,6 +127,7 @@ border-radius: 10px;
 text-decoration: none;
 font-size: 13px;
 font-weight: 600;
+transition: transform 0.2s;
 }
 
 .botaoEntrar {
@@ -134,17 +135,17 @@ color: white;
 }
 
 .botaoEntrar:hover {
-background: rgba(255, 255, 255, 0.18);
+transform: translateY(-2px);
 }
 
 .botaoCadastrar {
+transition: transform 0.2s;
 color: white;
 background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
 }
 
 .botaoCadastrar:hover {
-color: red;
-background: white
+transform: translateY(-2px);
 }
 
 .conteudoInicial {
@@ -176,12 +177,14 @@ padding: 38px;
 padding: 7px 12px;
 color: white;
 background: rgba(255, 255, 255, 0.14);
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
 border: 1px solid rgba(255, 255, 255, 0.28);
 border-radius: 20px;
 font-size: 11px;
 font-weight: 700;
 text-transform: uppercase;
 letter-spacing: 1px;
+border-color: white;
 }
 
 .textoDestaque h1 {
