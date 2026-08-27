@@ -184,9 +184,10 @@ color: white;
 background: transparent;
 border: none;
 font-family: "Sora", sans-serif;
-font-size: 10px;
-font-weight: 100;
+font-size: 13px;
+font-weight: 400;
 cursor: pointer;
+text-decoration: none;
 }
 
 .esqueceuSenhaBotao:hover {
