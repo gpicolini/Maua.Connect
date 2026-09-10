@@ -70,7 +70,7 @@ Construir uma plataforma web que permita:
 A gente vai dividir o projeto, na maioria do tempo, assim:
 
 
-### Front-end - Gui, Pattaro, Surdo e Ulliana
+### Front-end 
 
 Tudo que os usuários vão utilizar diretamente.
 
@@ -84,7 +84,7 @@ Exemplos:
 - visualização das impressoras disponíveis.
 
 
-### Back-end - Gab e Cabeça
+### Back-end 
 
 Responsável pelas regras do sistema.
 
@@ -99,7 +99,7 @@ Exemplos:
 - lógica de matchmaking.
 
 
-### Banco de Dados - Todo Mundo
+### Banco de Dados 
 
 Onde vamos guardar as informações do sistema.
 
@@ -117,7 +117,7 @@ Algumas entidades que provavelmente teremos:
 Essa estrutura ainda pode mudar conforme entendermos melhor o problema.
 
 
-### Matchmaking - Todo mundo
+### Matchmaking 
 
 O sistema deverá conseguir comparar uma demanda com as impressoras disponíveis.
 
@@ -280,12 +280,3 @@ refactor: reorganiza serviço de usuários
 
 ---
 
-
-Projeto desenvolvido por:
-
-- Miguel Ulliana
-- Gabriel Picolini
-- Gabriel Buranello
-- Guilherme Picolini
-- Vitor Pattaro
-- Pedro Henrique Toniolo
