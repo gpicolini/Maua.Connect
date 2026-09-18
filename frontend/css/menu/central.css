@@ -20,7 +20,9 @@ background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8
 
 .barradomenu {
 display: flex;
-width: 70%;
+width: 45%;
+align-self: flex-start;
+margin-left: 15%;
 height: 44px;
 gap: 2px;
 margin-bottom: 14px;
@@ -140,6 +142,7 @@ flex-shrink: 0;
 display: block;
 width: 65px;
 height: 65px;
+filter: brightness(0) invert(1);
 }
 
 .hamburguer:focus-visible {
@@ -161,4 +164,5 @@ width: 140px;
 height: 55px;
 object-fit: contain;
 flex-shrink: 0;
+filter: brightness(0) invert(1);
 }
