@@ -1,0 +1,164 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Sora", sans-serif;
+}
+
+.background {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: flex-start;
+padding: 20px 40px;
+background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.barradomenu {
+display: flex;
+width: 70%;
+height: 44px;
+gap: 2px;
+margin-bottom: 14px;
+margin-top: 60px;
+}
+
+.aba {
+flex: 1;
+padding: 0 8px;
+border: 0;
+border-radius: 0;
+background: #42010b;
+color: white;
+font-family: "Arial Narrow", Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+cursor: pointer;
+}
+
+.aba.ativa {
+box-shadow: inset 0 -3px 0 yellow;
+background: #d9253f;
+}
+
+.blocos {
+display: grid;
+width: 70%;
+height: 600px;
+grid-template-columns: repeat(6, minmax(0, 1fr));
+grid-template-rows: 180px 1fr;
+grid-template-areas: "grande grande grande superior superior superior" "grande grande grande um dois tres";
+gap: 6px;
+}
+
+.bloco {
+background: white;
+}
+
+.blocoPrincipal     { grid-area: grande; }
+.blocoInferiorEsquerdo     { grid-area: superior; }
+.blocoInferiorDireito  { grid-area: um; }
+.blocoInferiorMeio { grid-area: dois; }
+.blocoInferiorCima { grid-area: tres; }
+
+.cabecalho {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 70%;
+margin-top: 68px;
+margin-bottom: 20px;
+}
+
+.retanguloFifa {
+display: flex;
+width: 430px;
+height: 75px;
+flex-shrink: 0;
+transform: translatex(-150px);
+}
+
+.perfilInformacoes {
+flex: 1;
+min-width: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 4px;
+padding: 0 24px;
+background: white;
+color: #68616d;
+clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+}
+
+.perfilInformacoes strong {
+font-size: 20px;
+}
+
+.perfilInformacoes span {
+font-size: 14px;
+}
+
+.perfilPonta {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100px;
+padding-right: 20px;
+background: #858093;
+color: white;
+font-size: 28px;
+font-weight: bold;
+clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+}
+
+.acoesPerfil {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.hamburguer {
+position: static;
+display: grid;
+place-items: center;
+width: 65px;
+height: 65px;
+padding: 0;
+border: 0;
+background: transparent;
+cursor: pointer;
+flex-shrink: 0;
+}
+
+.hamburguer img {
+display: block;
+width: 65px;
+height: 65px;
+}
+
+.hamburguer:focus-visible {
+outline: 2px solid #f2b84b;
+outline-offset: 4px;
+}
+
+.logoInstituicao { 
+display: block;
+width: 76px;
+height: 76px;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+.logoMaua {
+display: block;
+width: 140px;
+height: 55px;
+object-fit: contain;
+flex-shrink: 0;
+}
