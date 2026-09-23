@@ -7,6 +7,7 @@ import com.azure.cosmos.CosmosClientBuilder;
 import com.azure.cosmos.CosmosContainer;
 import io.github.cdimascio.dotenv.Dotenv;
 
+
 @Configuration
 public class CosmosConfig {
     private final Dotenv dotenv = Dotenv.load();
@@ -26,7 +27,7 @@ public CosmosClient cosmosClient() {
 }
 
 
-
+@Bean
 public CosmosContainer cosmosContainer(CosmosClient usuariosCosmos) {
     CosmosContainer usuarios = usuariosCosmos
             .getDatabase(cosmosDatabase)
@@ -39,5 +40,4 @@ public CosmosContainer cosmosContainer(CosmosClient usuariosCosmos) {
     return usuarios;
 
 }
-
 }

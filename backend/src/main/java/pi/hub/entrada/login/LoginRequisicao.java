@@ -44,8 +44,6 @@ public String getSenha() {
 public void setSenha(String senha) {
     this.senha = senha;
 }
-
-
 }
 
 
