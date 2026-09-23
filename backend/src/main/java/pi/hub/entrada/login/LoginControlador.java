@@ -20,5 +20,4 @@ public class LoginControlador {
                 .body("Autenticação ainda não conectada ao armazenamento");
 
 }
-
 }
