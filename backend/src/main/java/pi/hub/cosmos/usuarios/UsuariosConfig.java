@@ -18,7 +18,6 @@ public class UsuariosConfig {
         this.usuariosContainer = usuariosContainer;
     }
 
-
 public Optional<Usuarios> buscarPorEmail(String email) {
     SqlQuerySpec consulta = new SqlQuerySpec("SELECT * FROM c WHERE STRINGEQUALS(c.emailInstitucional, @email, true)", List.of (new SqlParameter("@email", email.trim())));
 
