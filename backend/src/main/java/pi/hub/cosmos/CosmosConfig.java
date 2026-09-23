@@ -2,11 +2,9 @@ package pi.hub.cosmos;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import com.azure.cosmos.CosmosClient;
 import com.azure.cosmos.CosmosClientBuilder;
 import com.azure.cosmos.CosmosContainer;
-
 import io.github.cdimascio.dotenv.Dotenv;
 
 @Configuration

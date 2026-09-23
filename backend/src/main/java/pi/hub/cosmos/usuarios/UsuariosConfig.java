@@ -13,6 +13,7 @@ import java.util.Optional;
 @Repository
 public class UsuariosConfig {
     private final CosmosContainer usuariosContainer;
+    
     public UsuariosConfig(CosmosContainer usuariosContainer) {
         this.usuariosContainer = usuariosContainer;
     }
