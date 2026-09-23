@@ -1,7 +1,7 @@
 package pi.hub.entrada.login;
 
-import jakarta.validation.constraints.Email;  
-import jakarta.validation.constraints.NotBlank; 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 public class LoginRequisicao {
 
@@ -18,10 +18,10 @@ public class LoginRequisicao {
 public LoginRequisicao() {
     }
 
-public LoginRequisicao( 
+public LoginRequisicao(
     
     String email,
-    String senha) { 
+    String senha) {
 
     this.email = email;
     this.senha = senha;

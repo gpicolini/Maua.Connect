@@ -17,7 +17,7 @@ public class CadastroRequisicao {
     
     @NotBlank
     @Size (min = 8) // nao pode texto vazio, e tambem to cobrando tamanho da senha.. no caso, 8 caracteres
-    private String senha; 
+    private String senha;
 
     @NotBlank // nao pode texto vazio aqui tambemm
     private String confirmarSenha;
@@ -35,7 +35,7 @@ public CadastroRequisicao(
         String email,
         String senha,
         String confirmarSenha,
-        String tipoUsuario) { 
+        String tipoUsuario) {
             
             this.nome = nome;
             this.email = email;
@@ -65,7 +65,7 @@ public CadastroRequisicao(
         public String getSenha() {
             return senha;
         }
-      
+
         public void setSenha(String senha) {
             this.senha = senha;
         }
