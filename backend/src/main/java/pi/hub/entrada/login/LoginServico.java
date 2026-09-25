@@ -7,42 +7,48 @@ import pi.hub.cosmos.usuarios.Usuarios;
 import pi.hub.cosmos.usuarios.UsuariosConfig;
 import pi.hub.entrada.senha.SenhaHash;
 
-
 @Service
 public class LoginServico {
-    private UsuariosConfig usuarios;
-    private SenhaHash senhas;
-    private String hashComparacao;
 
-public LoginServico (UsuariosConfig usuarios, SenhaHash senhas) {
+    private final UsuariosConfig usuarios;
+    private final SenhaHash senhas;
+    private final String hashComparacao;
+
+public LoginServico(UsuariosConfig usuarios, SenhaHash senhas) {
     this.usuarios = usuarios;
     this.senhas = senhas;
     this.hashComparacao = senhas.gerarHash(java.util.UUID.randomUUID().toString());
 }
 
-public Usuarios autenticar (String email, String senha) {
+public Usuarios autenticar(String email, String senha) {
     var resultado = usuarios.buscarPorEmail(email);
-    String hash = resultado.map (Usuarios::getSenhaHash)
-    .orElse (hashComparacao);
 
+    String hash = hashComparacao;
 
-boolean senhaCorreta = senhas.verificarHash (senha, hash);
-if (resultado.isEmpty() || !senhaCorreta) {
-    throw acessoNegado();
-}
+    if (resultado.isPresent()) {
+        String hashSalvo = resultado.get().getSenhaHash();
 
-Usuarios usuario = resultado.get();
-if (!usuario.isAtivo()) {
-    throw acessoNegado();
-}
+    if (hashSalvo != null && !hashSalvo.isBlank()) {
+        hash = hashSalvo;
+        }
+    }
 
-return usuario;
+    boolean senhaCorreta = senhas.verificarHash(senha, hash);
 
-}
+    if (resultado.isEmpty() || !senhaCorreta) {
+        throw acessoNegado();
+    }
 
-private ResponseStatusException acessoNegado() {
-    
-    return new ResponseStatusException(HttpStatus.UNAUTHORIZED , "email ou senha inválidos");
+        Usuarios usuario = resultado.get();
 
-}
+    if (!usuario.isAtivo()) {
+        throw acessoNegado();
+        }
+
+    return usuario;
+    }
+
+    private ResponseStatusException acessoNegado() {
+        return new ResponseStatusException(HttpStatus.UNAUTHORIZED, "E-mail ou senha inválidos, ou conta indisponível.");
+    }
 }
