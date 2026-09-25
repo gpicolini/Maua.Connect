@@ -26,7 +26,6 @@ public CosmosClient cosmosClient() {
             .buildClient();
 }
 
-
 @Bean
 public CosmosContainer cosmosContainer(CosmosClient usuariosCosmos) {
     CosmosContainer usuarios = usuariosCosmos
