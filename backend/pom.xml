@@ -37,7 +37,7 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-		<dependency>		
+		<dependency>
 	<groupId>com.azure</groupId>
 	<artifactId>azure-cosmos</artifactId>
 	<version>4.80.0</version>
