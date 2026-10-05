@@ -49,15 +49,97 @@
         </nav>
 
 
+        <!-- os números e as demandas abaixo são exemplos até o backend ter os endpoints -->
         <section class="blocos">
-            <div class="bloco blocoPrincipal"></div>
-            <div class="bloco blocoInferiorEsquerdo"></div>
-            <div class="bloco blocoInferiorCentral"></div>
-            <div class="bloco blocoInferiorDireito"></div>
-            <div class="bloco blocoInferiorCima"></div>
-        </section>
 
-    </div>
+            <!-- bloco grande: demandas recentes -->
+            <div class="bloco blocoPrincipal">
+                <div class="tituloBloco">
+                    <h2>Demandas recentes</h2>
+                    <a href="#">Ver todas</a>
+                </div>
+
+                <ul class="listaDemandas">
+                    <li class="demanda">
+                        <div>
+                            <strong>Órtese de punho - infantil</strong>
+                            <span>PLA · FabLab Mauá</span>
+                        </div>
+                        <span class="status statusProducao">Em produção</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Adaptador de talher</strong>
+                            <span>TPU · aguardando impressora</span>
+                        </div>
+                        <span class="status statusAberta">Aberta</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Suporte para tablet - cadeira de rodas</strong>
+                            <span>PETG · Lab. Engenharia</span>
+                        </div>
+                        <span class="status statusQualidade">Em qualidade</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Engrossador de lápis</strong>
+                            <span>TPU · FabLab Santo André</span>
+                        </div>
+                        <span class="status statusConcluida">Concluída</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Prótese de mão - dedos</strong>
+                            <span>PLA · aguardando impressora</span>
+                        </div>
+                        <span class="status statusAberta">Aberta</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- bloco superior direito: números da rede -->
+            <div class="bloco blocoInferiorEsquerdo">
+                <div class="indicadores">
+                    <div class="indicador">
+                        <strong>12</strong>
+                        <span>Impressoras na rede</span>
+                    </div>
+                    <div class="indicador">
+                        <strong>8</strong>
+                        <span>Disponíveis agora</span>
+                    </div>
+                    <div class="indicador">
+                        <strong>5</strong>
+                        <span>Demandas abertas</span>
+                    </div>
+                    <div class="indicador">
+                        <strong>3</strong>
+                        <span>Em produção</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- blocos pequenos: atalhos -->
+            <a class="bloco atalho blocoInferiorDireito" href="../maquinas/registroMaquina.html">
+                <span class="iconeAtalho" aria-hidden="true">+</span>
+                <strong>Registrar máquina</strong>
+                <span>Adicione uma impressora 3D à rede</span>
+            </a>
+
+            <a class="bloco atalho blocoInferiorCentral" href="../admin/cadastroAdmin.html">
+                <span class="iconeAtalho" aria-hidden="true">&#9733;</span>
+                <strong>Cadastrar admin</strong>
+                <span>Dê acesso administrativo a alguém</span>
+            </a>
+
+            <a class="bloco atalho blocoInferiorCima" href="#">
+                <span class="iconeAtalho" aria-hidden="true">&#9776;</span>
+                <strong>Nova demanda</strong>
+                <span>Registre uma peça para fabricação</span>
+            </a>
+
+        </section>
 
     </div>
 
