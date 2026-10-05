@@ -1,7 +1,3 @@
-// Registro de máquina (impressora 3D)
-// Monta o JSON com os dados que o matchmaking vai precisar (materiais,
-// volume, localização, disponibilidade, homologação) e envia para o backend.
-// OBS: o endpoint /api/maquinas ainda não existe no backend, tem que criar.
 
 const URL_API = 'http://localhost:8082/api/maquinas';
 
@@ -47,8 +43,6 @@ function lerDados() {
     };
 }
 
-// valida usando as regras do próprio HTML (required, min, max...)
-// e confere os materiais à parte, porque checkbox não tem "required" de grupo
 function validar(dados) {
     let primeiroErro = '';
 
@@ -65,7 +59,7 @@ function validar(dados) {
     return primeiroErro;
 }
 
-// limpa o destaque de erro conforme o usuário corrige
+
 formulario.addEventListener('input', (evento) => {
     if (evento.target.classList.contains('campoLogin') && evento.target.checkValidity()) {
         evento.target.classList.remove('invalido');
@@ -98,7 +92,7 @@ formulario.addEventListener('submit', async (evento) => {
         const resposta = await fetch(URL_API, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            credentials: 'include', // manda o cookie da sessão do login
+            credentials: 'include',
             body: JSON.stringify(dados),
         });
 
@@ -108,7 +102,7 @@ formulario.addEventListener('submit', async (evento) => {
             return;
         }
 
-        formulario.reset(); // o reset limpa a mensagem, por isso vem antes
+        formulario.reset();
         mostrarMensagem('Máquina registrada com sucesso!', 'sucesso');
     } catch (falha) {
         mostrarMensagem('Não foi possível conectar ao servidor. O backend está rodando?', 'erro');

@@ -1,14 +1,9 @@
-// Cadastro de administrador
-// Envia para o mesmo endpoint do cadastro comum (CadastroControlador),
-// mudando só o tipoUsuario para o nível de acesso escolhido.
-
 const URL_API = 'http://localhost:8082/api/entrada/cadastro';
 
 const formulario = document.getElementById('formCadastroAdmin');
 const mensagem = document.getElementById('mensagemCadastroAdmin');
 const botaoEnviar = formulario.querySelector('.botaoCadastrar');
 
-// mostrar / esconder senha
 document.querySelectorAll('.botaoOlho').forEach((botao) => {
     botao.addEventListener('click', () => {
         const campo = botao.parentElement.querySelector('input');
