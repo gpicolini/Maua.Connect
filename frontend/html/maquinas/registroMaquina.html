@@ -28,7 +28,11 @@
             <h1 id="tituloRegistroMaquina">Registro de Máquina</h1>
             <p>Cadastre uma impressora 3D disponível para atender às demandas da AACD:</p>
 
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/develop
             <fieldset class="secao">
                 <legend>Identificação</legend>
 
@@ -66,7 +70,11 @@
                 </div>
             </fieldset>
 
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/develop
             <fieldset class="secao">
                 <legend>Especificações técnicas</legend>
 
@@ -74,6 +82,7 @@
                     <div class="campo campoLargo">
                         <span>Volume de impressão (mm)</span>
                         <div class="linhaVolume">
+<<<<<<< HEAD
                             <input class="campoLogin" type="number" name="volumeX" placeholder="X" min="1" required
                                 aria-label="Largura (X) em mm">
                             <span class="vezes">×</span>
@@ -82,24 +91,40 @@
                             <span class="vezes">×</span>
                             <input class="campoLogin" type="number" name="volumeZ" placeholder="Z" min="1" required
                                 aria-label="Altura (Z) em mm">
+=======
+                            <input class="campoLogin" type="number" name="volumeX" placeholder="X" min="1" required aria-label="Largura (X) em mm">
+                            <span class="vezes">×</span>
+                            <input class="campoLogin" type="number" name="volumeY" placeholder="Y" min="1" required aria-label="Profundidade (Y) em mm">
+                            <span class="vezes">×</span>
+                            <input class="campoLogin" type="number" name="volumeZ" placeholder="Z" min="1" required aria-label="Altura (Z) em mm">
+>>>>>>> origin/develop
                         </div>
                     </div>
 
                     <label class="campo">
                         <span>Diâmetro do bico (mm)</span>
+<<<<<<< HEAD
                         <input class="campoLogin" type="number" name="diametroBico" placeholder="Ex.: 0.4" step="0.1"
                             min="0.1">
+=======
+                        <input class="campoLogin" type="number" name="diametroBico" placeholder="Ex.: 0.4" step="0.1" min="0.1">
+>>>>>>> origin/develop
                     </label>
 
                     <label class="campo">
                         <span>Resolução mínima de camada (mm)</span>
+<<<<<<< HEAD
                         <input class="campoLogin" type="number" name="resolucaoCamada" placeholder="Ex.: 0.1"
                             step="0.01" min="0.01">
+=======
+                        <input class="campoLogin" type="number" name="resolucaoCamada" placeholder="Ex.: 0.1" step="0.01" min="0.01">
+>>>>>>> origin/develop
                     </label>
 
                     <div class="campo campoLargo" role="group" aria-labelledby="tituloMateriais">
                         <span id="tituloMateriais">Materiais suportados</span>
                         <div class="opcoesMateriais">
+<<<<<<< HEAD
                             <label class="chip"><input type="checkbox" name="materiais"
                                     value="PLA"><span>PLA</span></label>
                             <label class="chip"><input type="checkbox" name="materiais"
@@ -112,32 +137,53 @@
                                     value="NYLON"><span>Nylon</span></label>
                             <label class="chip"><input type="checkbox" name="materiais"
                                     value="RESINA"><span>Resina</span></label>
+=======
+                            <label class="chip"><input type="checkbox" name="materiais" value="PLA"><span>PLA</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="PETG"><span>PETG</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="ABS"><span>ABS</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="TPU"><span>TPU (flexível)</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="NYLON"><span>Nylon</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="RESINA"><span>Resina</span></label>
+>>>>>>> origin/develop
                         </div>
                     </div>
                 </div>
             </fieldset>
 
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/develop
             <fieldset class="secao">
                 <legend>Local e disponibilidade</legend>
 
                 <div class="grade">
                     <label class="campo">
                         <span>Instituição / laboratório</span>
+<<<<<<< HEAD
                         <input class="campoLogin" type="text" name="instituicao" placeholder="Ex.: FabLab Mauá"
                             required>
+=======
+                        <input class="campoLogin" type="text" name="instituicao" placeholder="Ex.: FabLab Mauá" required>
+>>>>>>> origin/develop
                     </label>
 
                     <label class="campo">
                         <span>Cidade</span>
+<<<<<<< HEAD
                         <input class="campoLogin" type="text" name="cidade" placeholder="Ex.: São Caetano do Sul"
                             required>
+=======
+                        <input class="campoLogin" type="text" name="cidade" placeholder="Ex.: São Caetano do Sul" required>
+>>>>>>> origin/develop
                     </label>
 
                     <label class="campo">
                         <span>UF</span>
                         <select class="campoLogin campoSelect" name="uf" required>
                             <option value="" disabled selected>UF</option>
+<<<<<<< HEAD
                             <option>AC</option>
                             <option>AL</option>
                             <option>AP</option>
@@ -165,13 +211,24 @@
                             <option>SP</option>
                             <option>SE</option>
                             <option>TO</option>
+=======
+                            <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option>
+                            <option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                            <option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option>
+                            <option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                            <option>SP</option><option>SE</option><option>TO</option>
+>>>>>>> origin/develop
                         </select>
                     </label>
 
                     <label class="campo">
                         <span>Horas disponíveis por semana</span>
+<<<<<<< HEAD
                         <input class="campoLogin" type="number" name="horasSemana" placeholder="Ex.: 20" min="1"
                             max="168" required>
+=======
+                        <input class="campoLogin" type="number" name="horasSemana" placeholder="Ex.: 20" min="1" max="168" required>
+>>>>>>> origin/develop
                     </label>
 
                     <label class="campo">
@@ -193,8 +250,12 @@
 
                     <label class="campo campoLargo">
                         <span>Observações (opcional)</span>
+<<<<<<< HEAD
                         <textarea class="campoLogin" name="observacoes" rows="3"
                             placeholder="Ex.: bico endurecido, mesa aquecida, câmara fechada..."></textarea>
+=======
+                        <textarea class="campoLogin" name="observacoes" rows="3" placeholder="Ex.: bico endurecido, mesa aquecida, câmara fechada..."></textarea>
+>>>>>>> origin/develop
                     </label>
                 </div>
             </fieldset>
@@ -213,4 +274,8 @@
     <script src="../../js/maquinas/registroMaquina.js"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> origin/develop
