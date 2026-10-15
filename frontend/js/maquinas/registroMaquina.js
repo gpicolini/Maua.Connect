@@ -1,5 +1,4 @@
-
-const URL_API = 'http://localhost:8082/api/maquinas';
+const URL_API = 'http://localhost:8082/subindoTeste/maquinas';
 
 const formulario = document.getElementById('formRegistroMaquina');
 const mensagem = document.getElementById('mensagemRegistroMaquina');
@@ -8,7 +7,7 @@ const grupoMateriais = formulario.querySelector('.opcoesMateriais');
 
 function mostrarMensagem(texto, tipo) {
     mensagem.textContent = texto;
-    mensagem.className = 'mensagem ' + tipo;
+    mensagem.className = 'mensagem' + tipo;
 }
 
 function numero(valor) {
