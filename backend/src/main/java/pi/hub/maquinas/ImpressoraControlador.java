@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/subindoTeste/maquinas")
-@CrossOrigin(origins = {"http://localhost:5500", "http://127.0.0.1:5500", "http://localhost:8082", "http://127.0.0.1:8082"}, allowCredentials = "true")
+@RestController @RequestMapping("/subindoTeste/maquinas") @CrossOrigin(origins = {"http://localhost:5500", "http://127.0.0.1:5500", "http://localhost:8082", "http://127.0.0.1:8082"}, allowCredentials = "true")
 public class ImpressoraControlador {
     private final ImpressoraRepositorio repositorio;
 

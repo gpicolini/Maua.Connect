@@ -1,1 +1,0 @@
-colocar a pasta javascript aq tbm.. pq vai ter q usar
