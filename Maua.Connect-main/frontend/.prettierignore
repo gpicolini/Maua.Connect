@@ -1,0 +1,11 @@
+# Dependências
+node_modules/
+
+# Arquivos gerados
+dist/
+build/
+coverage/
+
+# Arquivos minificados
+**/*.min.js
+**/*.min.css
