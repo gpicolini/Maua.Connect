@@ -1,7 +1,7 @@
-Isso aqui vamos fazer em java.. 
+Isso aqui vamos fazer em java..
 
 
-qualquer pergunta, segue a logica e pergunta no grupo 
+qualquer pergunta, segue a logica e pergunta no grupo
 
 
 CLASSE MAIN --> HubApplication
