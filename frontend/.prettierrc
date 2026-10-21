@@ -6,6 +6,12 @@
   "trailingComma": "all",
   "overrides": [
     {
+      "files": "*.css",
+      "options": {
+        "tabWidth": 0
+      }
+    },
+    {
       "files": "*.html",
       "options": {
         "printWidth": 160,
