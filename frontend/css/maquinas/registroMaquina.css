@@ -14,15 +14,14 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 40px;
-background: linear-gradient(135deg, #42010b 26%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+background: linear-gradient(135deg, #140c02 26%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
 }
 
 .border {
 position: relative;
 width: 1000px;
-background: linear-gradient(135deg, #42010b 16%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+background-color: #140c02;
 border-radius: 48px;
-border: 3px solid aliceblue;
 padding: 30px 60px 40px;
 display: flex;
 align-items: center;
@@ -90,8 +89,8 @@ transform: translateY(7px);
 
 .etiqueta {
 padding: 6px 12px;
-color: white;
-background: rgba(255, 255, 255, 0.14);
+color: black;
+background: white;
 border: 1px solid white;
 border-radius: 20px;
 font-size: 11px;
@@ -106,7 +105,7 @@ margin: 14px 0 0;
 padding: 18px 22px 22px;
 border: 1px solid rgba(255, 255, 255, 0.55);
 border-radius: 20px;
-background: rgba(66, 1, 11, 0.18);
+background: rgba(20, 12, 2, 0.18);
 }
 
 .secao legend {
@@ -145,7 +144,7 @@ font-weight: 600;
 color: white;
 width: 100%;
 padding: 12px 14px;
-background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+background-color: #140c02;
 border: 1px solid white;
 border-radius: 10px;
 font-family: inherit;
@@ -175,9 +174,7 @@ box-shadow: 0 0 0 3px rgba(66, 1, 11, 0.45);
 appearance: none;
 cursor: pointer;
 padding-right: 34px;
-background-image:
-url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"),
-linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"),140c02;
 background-repeat: no-repeat, no-repeat;
 background-position:
 right 10px center,
@@ -282,7 +279,7 @@ transition: transform 0.2s;
 }
 
 .botaoCadastrar {
-background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+background-color: #140c02;
 }
 
 .botaoSecundario {
