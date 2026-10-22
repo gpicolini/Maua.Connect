@@ -15,7 +15,7 @@ align-items: center;
 flex-direction: column;
 justify-content: flex-start;
 padding: 20px 40px;
-background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+background: linear-gradient(135deg, #140c02 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
 }
 
 .barradomenu {
