@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestBody; // recebe o JSON do 
 import org.springframework.web.bind.annotation.RequestMapping; // define o endereço-base
 import org.springframework.web.bind.annotation.RestController; // registra o controlador da API
 import jakarta.validation.Valid; // valida os campos recebidos
+import org.springframework.web.bind.annotation.CrossOrigin; // front
 
-@RestController
-@RequestMapping("/api/entrada") // endereço-base das rotas
+@CrossOrigin(origins = "http://127.0.0.1:5500") @RestController @RequestMapping("/api/entrada") // endereço-base das rotas
 public class CadastroControlador {
 
     private final CadastroServico cadastroServico; // serviço responsável pelo cadastro
