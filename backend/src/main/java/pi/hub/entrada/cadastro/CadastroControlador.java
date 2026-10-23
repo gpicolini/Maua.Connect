@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController; // registra o con
 import jakarta.validation.Valid; // valida os campos recebidos
 import org.springframework.web.bind.annotation.CrossOrigin; // front
 
-@CrossOrigin(origins = "http://127.0.0.1:5500") @RestController @RequestMapping("/api/entrada") // endereço-base das rotas
+@CrossOrigin(origins = "http://127.0.0.1:5501") @RestController @RequestMapping("/api/entrada") // endereço-base das rotas
 public class CadastroControlador {
 
     private final CadastroServico cadastroServico; // serviço responsável pelo cadastro
