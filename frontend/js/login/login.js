@@ -1,1 +1,0 @@
-const botao = document.querySelector (".botaoLogar");
