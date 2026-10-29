@@ -20,7 +20,7 @@ background: linear-gradient(135deg, #140c02 26%,  #d9253f 35%, #f2b84b 70%, #ff8
 .border {
 width: 1000px;
 min-height: 610px;
-background-color: #140c02;
+background-color: #212D2D;
 border-radius: 48px;
 padding: 30px;
 display: flex;
@@ -97,7 +97,7 @@ color: white;
 width: 100%;
 max-width: 420px;
 padding: 14px 16px;
-background-color: #140c02;
+background-color: #212D2D;
 border: 1px solid white;
 border-radius: 10px;
 font-size: 16px;
@@ -116,8 +116,8 @@ box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 .botaoCadastrar {
 width: 100%;
 padding: 14px;
-color: white;
-background-color: #140c02;
+color: black;
+background-color: white;
 border: 1px solid white;
 border-radius: 10px;
 font-size: 16px;
