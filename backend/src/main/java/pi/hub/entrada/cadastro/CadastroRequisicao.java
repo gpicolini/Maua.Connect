@@ -22,10 +22,7 @@ public class CadastroRequisicao {
     @NotBlank // nao pode texto vazio aqui tambemm
     private String confirmarSenha;
 
-    @NotBlank // muito menos aqui, nao enfia texto vazio nessa poha
-    private String tipoUsuario;
-    
-    
+
 public CadastroRequisicao() {
     }
     
@@ -34,14 +31,14 @@ public CadastroRequisicao(
         String nome,
         String email,
         String senha,
-        String confirmarSenha,
-        String tipoUsuario) {
+        String confirmarSenha
+    ) {
             
             this.nome = nome;
             this.email = email;
             this.senha = senha;
             this.confirmarSenha = confirmarSenha;
-            this.tipoUsuario = tipoUsuario;
+            
             
         }
 
@@ -76,14 +73,6 @@ public CadastroRequisicao(
     
         public void setConfirmarSenha(String confirmarSenha) {
             this.confirmarSenha = confirmarSenha;
-        }
-
-        public String getTipoUsuario() {
-            return tipoUsuario;
-        }
-    
-        public void setTipoUsuario(String tipoUsuario) {
-            this.tipoUsuario = tipoUsuario;
         }
     }
     
