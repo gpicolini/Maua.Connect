@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demandas | AACD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="../../css/menu/painel.css">
+    <link rel="stylesheet" href="../../css/menu/demandas.css">
+    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <nav class="topoDemandas" aria-label="Menu principal">
+            <a href="../inicio/inicial.html#inicio">Início</a>
+            <a href="../inicio/inicial.html#projeto">Projeto</a>
+            <a href="../inicio/inicial.html#historia">História</a>
+            <a class="botaoTopo" href="demandas.html" aria-current="page">Demandas</a>
+            <a class="botaoTopo" href="../inicio/login.html">Sair</a>
+        </nav>
+
+        <div class="conteudo">
+
+            <header class="tituloPagina">
+                <h1>Demandas</h1>
+                <p>Visualize e gerencie as solicitações de impressão recebidas.</p>
+            </header>
+
+            <main class="painelDemandas">
+
+                <form class="colunaFiltros" id="formFiltrosDemandas">
+                    <div class="tituloSecao">
+                        <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                            <circle cx="12" cy="6" r="3" />
+                            <circle cx="5" cy="8" r="2.3" />
+                            <circle cx="19" cy="8" r="2.3" />
+                            <path d="M6 20v-3a6 6 0 0 1 12 0v3z" />
+                            <path d="M1 19v-2a4 4 0 0 1 4.6-4A7.5 7.5 0 0 0 4.5 17v2zM23 19v-2a4 4 0 0 0-4.6-4 7.5 7.5 0 0 1 1.1 4v2z" />
+                        </svg>
+                        <div>
+                            <h2>Filtros</h2>
+                            <p>Refine sua busca pelas demandas.</p>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="periodo">Período</label>
+                        <select class="selecao comIcone" id="periodo" name="periodo">
+                            <option value="">Selecione um período</option>
+                            <option value="7">Últimos 7 dias</option>
+                            <option value="30">Últimos 30 dias</option>
+                            <option value="90">Últimos 90 dias</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <span class="rotulo" id="rotuloStatus">Status</span>
+                        <div class="opcoesStatus" role="group" aria-labelledby="rotuloStatus">
+                            <button class="ativa" type="button" data-status="">Todos</button>
+                            <button type="button" data-status="PENDENTE">Pendente</button>
+                            <button type="button" data-status="EM_PRODUCAO">Em Produção</button>
+                            <button type="button" data-status="CONCLUIDA">Concluída</button>
+                            <button type="button" data-status="CANCELADA">Cancelada</button>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoria da demanda</label>
+                        <select class="selecao" id="categoria" name="categoria">
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Prótese Modular">Prótese Modular</option>
+                            <option value="Prótese Definitiva">Prótese Definitiva</option>
+                            <option value="Prótese Parcial">Prótese Parcial</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="solicitante">Solicitante</label>
+                        <input class="entrada comIcone" id="solicitante" name="solicitante" type="search" placeholder="Nome da pessoa ou instituição">
+                    </div>
+
+                    <button class="botaoAplicar" type="submit">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M3 4h18l-7 8.5V20l-4-2v-5.5z" />
+                        </svg>
+                        Aplicar Filtros
+                    </button>
+                </form>
+
+                <section class="colunaLista">
+                    <div class="tituloSecao">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="1.5" width="18" height="21" rx="3" fill="white" />
+                            <path d="M7 7h10M7 11h10M7 15h10M7 19h6" stroke="#5c0610" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <div>
+                            <h2>Lista de Demandas</h2>
+                            <p>Acompanhe o status das solicitações de impressão.</p>
+                        </div>
+                    </div>
+
+                    <ul class="listaDemandas" id="listaDemandas"></ul>
+
+                    <div class="rodapeLista">
+                        <p class="contagem" id="contagemDemandas"></p>
+                        <div class="paginacao" id="paginacaoDemandas"></div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="../../js/menu/utilitarios.js"></script>
+    <script src="../../js/menu/demandas.js"></script>
+</body>
+
+</html>

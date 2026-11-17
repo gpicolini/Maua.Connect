@@ -1,0 +1,331 @@
+/* A tela de Demandas segue o layout do site público (barra superior), e não o painel com abas */
+
+.topoDemandas {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 40px;
+margin: -24px -4.3% 0;
+padding: 10px 2.5%;
+background: #5c0610;
+border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.topoDemandas a {
+color: white;
+font-size: 16px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.topoDemandas a:hover {
+text-decoration: underline;
+}
+
+.topoDemandas .botaoTopo {
+padding: 8px 24px;
+background: white;
+color: #2b2730;
+border-radius: 8px;
+}
+
+.topoDemandas .botaoTopo:hover {
+text-decoration: none;
+}
+
+.tituloPagina {
+margin: 36px 0 30px;
+color: white;
+}
+
+.tituloPagina h1 {
+margin: 0;
+font-size: 60px;
+line-height: 1.1;
+}
+
+.tituloPagina p {
+margin: 4px 0 0;
+font-size: 26px;
+font-weight: 700;
+}
+
+.tituloPagina::after {
+display: block;
+width: 125px;
+height: 5px;
+margin-top: 14px;
+background: #f2b84b;
+border-radius: 3px;
+content: "";
+}
+
+.painelDemandas {
+display: grid;
+grid-template-columns: 450px 1fr;
+background: #5c0610;
+border-radius: 20px;
+color: white;
+box-shadow: 0 10px 30px rgba(66, 1, 11, 0.3);
+}
+
+.colunaFiltros {
+display: flex;
+flex-direction: column;
+gap: 26px;
+padding: 26px 32px 32px;
+border-right: 2px solid rgba(255, 255, 255, 0.25);
+margin: 24px 0;
+}
+
+.colunaLista {
+padding: 26px 16px 24px 24px;
+}
+
+.tituloSecao {
+display: flex;
+align-items: center;
+gap: 34px;
+}
+
+.tituloSecao svg {
+width: 64px;
+height: 64px;
+flex-shrink: 0;
+}
+
+.tituloSecao h2 {
+margin: 0;
+font-size: 30px;
+}
+
+.tituloSecao p {
+margin: 2px 0 0;
+font-size: 16px;
+opacity: 0.9;
+}
+
+.colunaFiltros .campo label,
+.colunaFiltros .rotulo {
+color: white;
+}
+
+.colunaFiltros .selecao,
+.colunaFiltros .entrada {
+background-color: transparent;
+color: white;
+border-color: rgba(255, 255, 255, 0.8);
+}
+
+.colunaFiltros .selecao {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.colunaFiltros .selecao option {
+color: #2b2730;
+}
+
+.colunaFiltros .entrada::placeholder {
+color: rgba(255, 255, 255, 0.85);
+}
+
+.comIcone {
+padding-left: 46px;
+background-repeat: no-repeat;
+background-position: left 14px center;
+}
+
+.colunaFiltros .selecao.comIcone {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"),
+url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2'/%3E%3Cpath d='M16 2v4M8 2v4M3 10h18'/%3E%3C/svg%3E");
+background-position: right 16px center, left 14px center;
+}
+
+.entrada.comIcone {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E");
+}
+
+.opcoesStatus {
+display: flex;
+flex-wrap: wrap;
+gap: 4px;
+padding: 3px;
+border: 1px solid rgba(255, 255, 255, 0.8);
+border-radius: 22px;
+}
+
+.opcoesStatus button {
+flex: 1 1 auto;
+padding: 8px 7px;
+white-space: nowrap;
+background: transparent;
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.45);
+border-radius: 20px;
+font-family: inherit;
+font-size: 12px;
+cursor: pointer;
+}
+
+.opcoesStatus button.ativa {
+background: white;
+color: #2b2730;
+font-weight: 700;
+}
+
+.botaoAplicar {
+align-self: center;
+display: inline-flex;
+align-items: center;
+gap: 12px;
+padding: 14px 64px;
+background: white;
+color: #2b2730;
+border: 0;
+border-radius: 30px;
+font-family: inherit;
+font-size: 19px;
+font-weight: 700;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+.botaoAplicar:hover {
+transform: translateY(-2px);
+}
+
+.botaoAplicar svg {
+width: 24px;
+height: 24px;
+}
+
+.listaDemandas {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin: 24px 0 0;
+padding: 0;
+list-style: none;
+}
+
+.demanda {
+display: grid;
+grid-template-columns: 190px 1fr 150px auto;
+align-items: center;
+gap: 22px;
+padding: 18px 20px;
+background: #fbf3ee;
+color: #2b2730;
+border-radius: 14px;
+}
+
+.solicitante {
+display: flex;
+align-items: center;
+gap: 14px;
+padding-right: 18px;
+border-right: 1px solid #c9bfc2;
+}
+
+.solicitante svg {
+width: 32px;
+height: 32px;
+flex-shrink: 0;
+}
+
+.solicitante strong {
+display: block;
+font-size: 16px;
+}
+
+.solicitante span,
+.infoDemanda span {
+color: #68616d;
+font-size: 14px;
+}
+
+.infoDemanda strong {
+display: block;
+margin-bottom: 4px;
+font-size: 16px;
+}
+
+.situacao {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 6px;
+}
+
+.data {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 16px;
+}
+
+.data svg {
+width: 18px;
+height: 18px;
+}
+
+.listaDemandas .vazio {
+background: #fbf3ee;
+color: #68616d;
+border-radius: 14px;
+text-align: center;
+}
+
+.colunaLista .contagem {
+color: white;
+}
+
+.colunaLista .paginacao button {
+background: transparent;
+color: white;
+border: 2px solid white;
+}
+
+.colunaLista .paginacao button.ativa {
+background: transparent;
+color: white;
+border-color: #e8202e;
+}
+
+@media (max-width: 1200px) {
+.painelDemandas {
+grid-template-columns: 1fr;
+}
+
+.colunaFiltros {
+margin: 0 24px;
+padding: 26px 0;
+border-right: 0;
+border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+}
+
+@media (max-width: 800px) {
+.topoDemandas {
+gap: 18px;
+overflow-x: auto;
+}
+
+.tituloPagina h1 {
+font-size: 40px;
+}
+
+.tituloPagina p {
+font-size: 18px;
+}
+
+.demanda {
+grid-template-columns: 1fr;
+}
+
+.solicitante {
+padding: 0 0 12px;
+border-right: 0;
+border-bottom: 1px solid #c9bfc2;
+}
+}

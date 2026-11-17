@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Impressões | AACD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/menu/painel.css">
+    <link rel="stylesheet" href="../../css/menu/historico.css">
+    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="conteudo">
+
+            <header class="cabecalho">
+                <div class="acoesPerfil">
+                    <button class="hamburguer" type="button" aria-label="Abrir menu">
+                        <img src="../../imagens/menu/icones/hamburger.svg" alt="">
+                    </button>
+                    <div class="logos">
+                        <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
+                        <span class="divisor"></span>
+                        <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg" alt="Logo do Instituto Mauá de Tecnologia">
+                    </div>
+                </div>
+
+                <div class="perfil">
+                    <div class="perfilInformacoes">
+                        <strong>Olá, [Nome do Usuário]</strong>
+                        <span>AACD</span>
+                    </div>
+                    <div class="perfilPonta">MD</div>
+                </div>
+            </header>
+
+            <nav class="barraDoMenu" aria-label="Menu principal">
+                <a class="aba" href="central.html">Central</a>
+                <a class="aba" href="demandas.html">Demandas</a>
+                <a class="aba" href="impressoras.html">Impressoras</a>
+                <a class="aba" href="producao.html">Produção</a>
+                <a class="aba" href="#">Qualidade</a>
+                <a class="aba ativa" href="historico.html" aria-current="page">Histórico</a>
+            </nav>
+
+            <main class="cartao">
+                <div class="cartaoTopo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                        <path d="M3 3v5h5M12 7v5l3 3" />
+                    </svg>
+                    <h1>Histórico de Impressões</h1>
+                </div>
+
+                <div class="cartaoCorpo">
+                    <p class="subtitulo">Consulte abaixo o histórico das impressões já realizadas.</p>
+
+                    <form class="filtros" id="formFiltros">
+                        <div class="campo">
+                            <label for="periodo">Período</label>
+                            <select class="selecao selecaoPeriodo" id="periodo" name="periodo">
+                                <option value="">Selecione um período</option>
+                                <option value="7">Últimos 7 dias</option>
+                                <option value="30">Últimos 30 dias</option>
+                                <option value="90">Últimos 90 dias</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="categoria">Categoria da Prótese</label>
+                            <select class="selecao" id="categoria" name="categoria">
+                                <option value="">Selecione uma categoria</option>
+                                <option value="Transfemoral">Transfemoral</option>
+                                <option value="Transtibial">Transtibial</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="status">Status</label>
+                            <select class="selecao" id="status" name="status">
+                                <option value="">Todos os status</option>
+                                <option value="CONCLUIDA">Concluída</option>
+                                <option value="EM_PRODUCAO">Em Produção</option>
+                                <option value="CANCELADA">Cancelada</option>
+                            </select>
+                        </div>
+
+                        <button class="botaoPrincipal" type="submit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7" />
+                                <path d="m20 20-4-4" />
+                            </svg>
+                            Filtrar
+                        </button>
+                    </form>
+
+                    <div class="tabelaRolagem">
+                        <table class="tabela">
+                            <thead>
+                                <tr>
+                                    <th>Data da Impressão</th>
+                                    <th>Categoria</th>
+                                    <th>Tipo de Prótese</th>
+                                    <th>Lado de Uso</th>
+                                    <th>Status</th>
+                                    <th class="colunaAcoes">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corpoHistorico"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="rodapeLista">
+                        <p class="contagem" id="contagemHistorico"></p>
+                        <div class="paginacao" id="paginacaoHistorico"></div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="../../js/menu/utilitarios.js"></script>
+    <script src="../../js/menu/historico.js"></script>
+</body>
+
+</html>
