@@ -248,7 +248,6 @@ white-space: nowrap;
 
 .statusAberta { color: #42010b; background: #fde7c2; }
 .statusProducao { color: white; background: #d9253f; }
-.statusQualidade { color: #42010b; background: #ffd3cf; }
 .statusConcluida { color: white; background: #42010b; }
 
 .indicadores {
