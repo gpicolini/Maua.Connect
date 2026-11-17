@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtros das Impressoras | AACD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="../../css/menu/tela-funcao.css">
+  <link rel="stylesheet" href="../../css/menu/impressoras-filtros.css">
+  <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+  <main class="card">
+    <a href="impressoras.html" class="voltar">← Voltar</a>
+
+    <header class="cabecalho">
+      <div class="logos">
+        <img class="aacd" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="AACD" />
+        <span class="divisor"></span>
+        <img class="maua" src="../../imagens/inicio/logos/logo-maua.svg" alt="Instituto Mauá de Tecnologia" />
+      </div>
+      <span class="tag">IMPRESSORAS</span>
+      <h1>Filtros</h1>
+      <p>Refine sua busca pelas impressoras:</p>
+    </header>
+
+    <form id="form-filtros">
+      <fieldset>
+        <legend>BUSCA</legend>
+        <span class="rotulo">Status da impressora</span>
+        <div class="chips">
+          <input type="radio" name="status" id="status-0" value="" checked /><label for="status-0">Todos</label>
+          <input type="radio" name="status" id="status-1" value="Disponível" /><label for="status-1">Disponível</label>
+          <input type="radio" name="status" id="status-2" value="Em Manutenção" /><label for="status-2">Em
+            manutenção</label>
+          <input type="radio" name="status" id="status-3" value="Offline" /><label for="status-3">Offline</label>
+        </div>
+        <div class="linha">
+          <div>
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+              <option value="">Todas as categorias</option>
+              <option value="Prótese Modular">Prótese Modular</option>
+              <option value="Prótese Definitiva">Prótese Definitiva</option>
+              <option value="Prótese Parcial">Prótese Parcial</option>
+            </select>
+          </div>
+          <div>
+            <label for="localizacao">Localização</label>
+            <select id="localizacao">
+              <option value="">Todas as localizações</option>
+              <option value="Laboratório Principal">
+                Laboratório Principal
+              </option>
+              <option value="Laboratório de Pesquisa">
+                Laboratório de Pesquisa
+              </option>
+              <option value="Laboratório de Engenharia">
+                Laboratório de Engenharia
+              </option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="botoes">
+        <button type="submit" class="btn-principal">Aplicar filtros</button>
+        <button type="button" class="btn-secundario" id="limpar">
+          Limpar filtros
+        </button>
+      </div>
+    </form>
+  </main>
+
+
+  <script src="../../js/menu/menu-dados.js"></script>
+  <script src="../../js/menu/impressoras-filtros.js"></script>
+</body>
+
+</html>

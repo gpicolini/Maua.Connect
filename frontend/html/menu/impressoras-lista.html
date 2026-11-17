@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de impressoras | AACD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="../../css/menu/tela-funcao.css">
+  <link rel="stylesheet" href="../../css/menu/impressoras-lista.css">
+  <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+  <main class="card">
+    <div class="topo">
+      <a href="impressoras.html" class="voltar">← Voltar</a>
+      <a href="impressoras-filtros.html" class="filtro-ativo"><i class="ti ti-filter"></i><span
+          id="texto-filtro">Filtro: todos</span></a>
+    </div>
+
+    <header class="cabecalho">
+      <div class="logos">
+        <img class="aacd" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="AACD" />
+        <span class="divisor"></span>
+        <img class="maua" src="../../imagens/inicio/logos/logo-maua.svg" alt="Instituto Mauá de Tecnologia" />
+      </div>
+      <span class="tag">IMPRESSORAS</span>
+      <h1>Lista de impressoras</h1>
+      <p>Confira as impressoras selecionadas para atender suas demandas:</p>
+    </header>
+
+    <p class="avisoExemplo">Dados de exemplo — esta lista ainda não consulta o banco.</p>
+    <section class="lista" id="lista"></section>
+
+    <footer class="rodape">
+      <span id="contador"></span>
+      <div class="paginacao" id="paginacao"></div>
+    </footer>
+  </main>
+
+
+  <script src="../../js/menu/menu-dados.js"></script>
+  <script src="../../js/menu/impressoras-lista.js"></script>
+</body>
+
+</html>
