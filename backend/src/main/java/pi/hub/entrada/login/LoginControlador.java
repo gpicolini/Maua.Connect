@@ -18,3 +18,4 @@ public class LoginControlador {
         .body("Login ainda não está conectado ao MySQL. A integração de usuários está pendente.");
     }
 }
+    
