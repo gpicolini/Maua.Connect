@@ -86,7 +86,7 @@ display: flex;
 width: 430px;
 height: 75px;
 flex-shrink: 0;
-transform: translatex(-150px);
+transform: translatex(650px);
 }
 
 .perfilInformacoes {
@@ -155,11 +155,12 @@ outline-offset: 4px;
 }
 
 .logoInstituicao {
-display: block;
+display: flex;
 width: 76px;
 height: 76px;
 object-fit: contain;
 flex-shrink: 0;
+transform: translateX(-800px);
 }
 
 .logoMaua {
@@ -169,6 +170,7 @@ height: 55px;
 object-fit: contain;
 flex-shrink: 0;
 filter: brightness(0) invert(1);
+transform: translateX(-790px);
 }
 
 .formularioProtese {
