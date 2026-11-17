@@ -11,7 +11,7 @@ botao.addEventListener("click", async () => {
     botao.disabled = true;
 
     try {
-        const resposta = await fetch("http://localhost:8083/api/entrada/cadastro",
+        const resposta = await fetch("http://localhost:8082/api/entrada/cadastro",
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
