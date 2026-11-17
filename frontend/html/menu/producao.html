@@ -1,125 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitar Prótese | AACD</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="../../css/menu/painel.css">
-    <link rel="stylesheet" href="../../css/menu/producao.css">
-    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produção | AACD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="../../css/menu/central.css">
+  <link rel="stylesheet" href="../../css/menu/painel-cards.css">
+  <link rel="stylesheet" href="../../css/menu/producao.css">
+  <link rel="stylesheet" href="../../css/menu/menu-base.css">
+  <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+<script src="../../js/menu/usuario-sessao.js" defer></script>
 </head>
 
 <body>
+  <div class="background">
+    <header class="cabecalho">
+      <div class="retanguloFifa">
+        <div class="perfilInformacoes">
+          <strong><a class="nomeUsuario" data-usuario-nome aria-live="polite">Carregando usuário...</a></strong>
+        </div>
+        <div class="perfilPonta" data-usuario-iniciais aria-label="Iniciais do usuário">…</div>
+      </div>
 
-   <div class="background">
+      <div class="acoesPerfil">
+        <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
+        <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg" alt="Logo do Instituto Mauá de Tecnologia">
+      </div>
 
-         <header class="cabecalho">
-            <div class="retanguloFifa">
-                <div class="perfilInformacoes">
-                    <strong>Olá, [Nome do Usuário]</strong>
-                    <span>Medico</span>
+    </header>
+    <nav class="barradomenu" aria-label="Menu principal">
+      <a class="aba" href="central.html">Central</a>
+      <a class="aba" href="demandas.html">Demandas</a>
+      <a class="aba" href="impressoras.html">Impressoras</a>
+      <a class="aba ativa" aria-current="page" href="producao.html">Produção</a>
+      <a class="aba" href="historico.html">Histórico</a>
+    </nav>
+    <div class="painelMenu">
+      <p class="avisoExemplo">Prévia com dados de exemplo.</p>
+
+      <main class="conteudo" style="grid-template-columns: 1fr 2fr; grid-template-rows: 1fr 1fr">
+        <a href="producao-solicitar.html" class="card-acao">
+          <span class="icone"><i class="ti ti-plus"></i></span>
+          <div>
+            <h3>Solicitar prótese</h3>
+            <p>Preencha os dados da prótese para pedir uma nova impressão.</p>
+            <span class="abrir">Abrir formulário <i class="ti ti-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="historico-lista.html" class="card-acao">
+          <span class="icone"><i class="ti ti-list-check"></i></span>
+          <div>
+            <h3>Histórico de impressões</h3>
+            <p>Consulte os registros de impressão.</p>
+            <span class="abrir">Abrir histórico <i class="ti ti-arrow-right"></i></span>
+          </div>
+        </a>
+        <section class="painel" style="grid-column: 2; grid-row: 1 / 3">
+          <div>
+            <h2>Produção em andamento</h2>
+            <p class="sub">3 peças sendo impressas · 5 pedidos na fila</p>
+          </div>
+
+          <div>
+            <h4>Imprimindo agora</h4>
+            <div class="trabalhos">
+              <div class="trabalho">
+                <div class="trabalho-topo">
+                  <div>
+                    <b>Órtese de punho - infantil</b><small>Raise3D Pro2 · PLA</small>
+                  </div>
+                  <div class="pct">65%</div>
                 </div>
-                <div class="perfilPonta">MD</div>
+                <div class="progresso"><span style="width: 65%"></span></div>
+                <small class="fim"><i class="ti ti-clock"></i>Previsão de término: 16:40</small>
+              </div>
+              <div class="trabalho">
+                <div class="trabalho-topo">
+                  <div>
+                    <b>Prótese modular - antebraço</b><small>Creality Ender 3 V2 · PETG</small>
+                  </div>
+                  <div class="pct">30%</div>
+                </div>
+                <div class="progresso"><span style="width: 30%"></span></div>
+                <small class="fim"><i class="ti ti-clock"></i>Previsão de término: 19:15</small>
+              </div>
+              <div class="trabalho">
+                <div class="trabalho-topo">
+                  <div>
+                    <b>Órtese de tornozelo</b><small>Bambu Lab P1S · TPU</small>
+                  </div>
+                  <div class="pct">85%</div>
+                </div>
+                <div class="progresso"><span style="width: 85%"></span></div>
+                <small class="fim"><i class="ti ti-clock"></i>Previsão de término: 15:05</small>
+              </div>
             </div>
+          </div>
 
-            <div class="acoesPerfil">
-                <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
-                <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg"
-                    alt="Logo do Instituto Mauá de Tecnologia">
+          <div>
+            <h4>Próximos da fila</h4>
+            <div class="linhas">
+              <div class="linha-info">
+                <div>
+                  <b>1. Adaptador de talher</b><small>TPU · estimativa de 2h</small>
+                </div>
+                <span class="etiqueta amarela">Aguardando impressora</span>
+              </div>
+              <div class="linha-info">
+                <div>
+                  <b>2. Prótese de mão - dedos</b><small>PLA · estimativa de 5h</small>
+                </div>
+                <span class="etiqueta amarela">Aguardando impressora</span>
+              </div>
+              <div class="linha-info">
+                <div>
+                  <b>3. Suporte para tablet</b><small>PETG · estimativa de 3h</small>
+                </div>
+                <span class="etiqueta cinza">Na fila</span>
+              </div>
             </div>
+          </div>
 
-        </header>
-
-
-            <nav class="barradomenu" aria-label="Menu principal">
-                <a class="aba" href="central.html">Central</a>
-                <a class="aba" href="demandas.html">Demandas</a>
-                <a class="aba" href="impressoras.html">Impressoras</a>
-                <a class="aba ativa" href="producao.html" aria-current="page">Produção</a>
-                <a class="aba" href="historico.html">Histórico</a>
-            </nav>
-
-            <main class="cartao">
-                <div class="cartaoTopo">
-                    <svg viewBox="0 0 64 64" fill="white" aria-hidden="true">
-                        <path d="M24 4h18v6c0 4-2 8-4 12l-3 14v8h-9v-8l-1-16c-1-4-1-8-1-12z" />
-                        <path d="M26 46h10l2 6h10a4 4 0 0 1 0 8H18a4 4 0 0 1-4-4c0-3 3-5 6-6z" />
-                    </svg>
-                    <h1>Solicitar Prótese</h1>
+          <div>
+            <h4>Materiais em estoque</h4>
+            <div class="materiais">
+              <div class="material">
+                <div class="material-topo"><b>PLA</b><span>72%</span></div>
+                <div class="progresso"><span style="width: 72%"></span></div>
+              </div>
+              <div class="material">
+                <div class="material-topo"><b>PETG</b><span>45%</span></div>
+                <div class="progresso"><span style="width: 45%"></span></div>
+              </div>
+              <div class="material baixo">
+                <div class="material-topo">
+                  <b>TPU</b><span>Estoque baixo · 18%</span>
                 </div>
-
-                <div class="cartaoCorpo">
-                    <p class="subtitulo">Preencha os dados da prótese desejada para solicitar a impressão.</p>
-
-                    <form class="formularioProtese" id="formSolicitarProtese" novalidate>
-                        <div class="campo">
-                            <label for="categoria">Categoria da prótese<span class="obrigatorio">*</span></label>
-                            <select class="selecao" id="categoria" name="categoria" required>
-                                <option value="" selected disabled>Selecione uma categoria</option>
-                                <option value="TRANSFEMORAL">Transfemoral</option>
-                                <option value="TRANSTIBIAL">Transtibial</option>
-                                <option value="MEMBRO_SUPERIOR">Membro superior</option>
-                                <option value="MAO_DEDOS">Mão / dedos</option>
-                            </select>
-                        </div>
-
-                        <div class="campo">
-                            <label for="tipo">Tipo de prótese<span class="obrigatorio">*</span></label>
-                            <select class="selecao" id="tipo" name="tipo" required>
-                                <option value="" selected disabled>Selecione o tipo</option>
-                                <option value="MODULAR">Prótese Modular</option>
-                                <option value="DEFINITIVA">Prótese Definitiva</option>
-                                <option value="PARCIAL">Prótese Parcial</option>
-                            </select>
-                        </div>
-
-                        <div class="campo">
-                            <label for="lado">Lado de uso<span class="obrigatorio">*</span></label>
-                            <select class="selecao" id="lado" name="lado" required>
-                                <option value="" selected disabled>Selecione o lado</option>
-                                <option value="DIREITO">Direito</option>
-                                <option value="ESQUERDO">Esquerdo</option>
-                                <option value="BILATERAL">Bilateral</option>
-                            </select>
-                        </div>
-
-                        <div class="campo">
-                            <label for="faixaEtaria">Faixa etária indicada<span class="obrigatorio">*</span></label>
-                            <select class="selecao" id="faixaEtaria" name="faixaEtaria" required>
-                                <option value="" selected disabled>Selecione a faixa etária</option>
-                                <option value="INFANTIL">Infantil (0 a 12 anos)</option>
-                                <option value="ADOLESCENTE">Adolescente (13 a 17 anos)</option>
-                                <option value="ADULTO">Adulto (18 a 59 anos)</option>
-                                <option value="IDOSO">Idoso (60+ anos)</option>
-                            </select>
-                        </div>
-
-                        <div class="campo campoInteiro">
-                            <label for="descricao">Descrição da prótese<span class="obrigatorio">*</span></label>
-                            <textarea class="areaTexto" id="descricao" name="descricao" maxlength="500" required
-                                placeholder="Descreva o objetivo, funcionalidades e características principais da prótese..."></textarea>
-                            <span class="contadorCaracteres" id="contadorDescricao">0/500</span>
-                        </div>
-
-                        <div class="acoesFormulario">
-                            <p class="mensagem" id="mensagemSolicitacao" role="status"></p>
-                            <button class="botaoPrincipal" type="submit">
-                                Finalizar Pedido
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="m9 6 6 6-6 6" />
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </main>
-
-        
+                <div class="progresso"><span style="width: 18%"></span></div>
+              </div>
+              <div class="material">
+                <div class="material-topo"><b>Resina</b><span>60%</span></div>
+                <div class="progresso"><span style="width: 60%"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-
-    <script src="../../js/menu/producao.js"></script>
+  </div>
 </body>
 
 </html>

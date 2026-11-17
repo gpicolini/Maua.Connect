@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtros do Histórico | AACD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="../../css/menu/tela-funcao.css">
+  <link rel="stylesheet" href="../../css/menu/historico-filtros.css">
+  <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+  <main class="card">
+    <a href="historico.html" class="voltar">← Voltar</a>
+
+    <header class="cabecalho">
+      <div class="logos">
+        <img class="aacd" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="AACD" />
+        <span class="divisor"></span>
+        <img class="maua" src="../../imagens/inicio/logos/logo-maua.svg" alt="Instituto Mauá de Tecnologia" />
+      </div>
+      <span class="tag">HISTÓRICO</span>
+      <h1>Filtros</h1>
+      <p>Refine sua busca pelas impressões realizadas:</p>
+    </header>
+
+    <form id="form-filtros">
+      <fieldset>
+        <legend>BUSCA</legend>
+        <div class="linha">
+          <div>
+            <label for="periodo">Período</label>
+            <select id="periodo">
+              <option value="">Selecione um período</option>
+              <option value="7">Últimos 7 dias</option>
+              <option value="30">Últimos 30 dias</option>
+              <option value="90">Últimos 3 meses</option>
+              <option value="custom">Personalizado</option>
+            </select>
+            <div class="periodo-custom" id="periodo-custom">
+              <input type="date" id="data-inicio" aria-label="Data inicial" />
+              <input type="date" id="data-fim" aria-label="Data final" />
+            </div>
+          </div>
+          <div>
+            <label for="categoria">Categoria da prótese</label>
+            <select id="categoria">
+              <option value="">Selecione uma categoria</option>
+              <option value="Transfemoral">Transfemoral</option>
+              <option value="Transtibial">Transtibial</option>
+            </select>
+          </div>
+        </div>
+        <span class="rotulo">Status</span>
+        <div class="chips">
+          <input type="radio" name="status" id="status-0" value="" checked /><label for="status-0">Todos</label>
+          <input type="radio" name="status" id="status-1" value="Concluída" /><label for="status-1">Concluída</label>
+          <input type="radio" name="status" id="status-2" value="Em Produção" /><label for="status-2">Em
+            produção</label>
+          <input type="radio" name="status" id="status-3" value="Cancelada" /><label for="status-3">Cancelada</label>
+        </div>
+      </fieldset>
+
+      <div class="botoes">
+        <button type="submit" class="btn-principal">Aplicar filtros</button>
+        <button type="button" class="btn-secundario" id="limpar">
+          Limpar filtros
+        </button>
+      </div>
+    </form>
+  </main>
+
+
+  <script src="../../js/menu/menu-dados.js"></script>
+  <script src="../../js/menu/historico-filtros.js"></script>
+</body>
+
+</html>

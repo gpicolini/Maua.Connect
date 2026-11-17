@@ -1,10 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
   
   <head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../../js/login/login.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
     <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
     <title>Login | AACD</title>
-  </head>
+  <script src="../../js/inicio/senha-visivel.js" defer></script>
+</head>
   
   
   <body>
@@ -43,16 +47,16 @@
       <div class="campoComIcone">
         <img class="iconeCampo" src="../../imagens/inicio/icones/icone-email.svg" alt="">
 
-        <input class="campoLogin" type="email" placeholder="E-mail">
+        <input class="campoLogin" type="email" name="email" autocomplete="username" required placeholder="E-mail">
       </div>
 
       <div class="campoComIcone">
         <img class="iconeCampo" src="../../imagens/inicio/icones/icone-cadeado.svg" alt="">
 
-        <input class="campoLogin" type="password" placeholder="Senha">
+        <input class="campoLogin" type="password" name="senha" autocomplete="current-password" required placeholder="Senha">
 
         <button class="botaoOlho" type="button">
-          <img src="../../imagens/inicio/icones/icone-olho.svg" alt="Mostrar senha">
+          <img src="../../imagens/inicio/icones/icone-olho-fechado.svg" alt="Mostrar senha">
         </button>
       </div>
 

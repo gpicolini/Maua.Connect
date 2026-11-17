@@ -1,0 +1,95 @@
+.card {
+width: 100%;
+max-width: 1100px;
+background: #222b2b;
+border-radius: 40px;
+padding: 32px 70px 44px;
+color: #fff;
+}
+
+select,
+input[type='text'],
+input[type='date'] {
+width: 100%;
+height: 52px;
+background: transparent;
+border: 1px solid #cfd6d6;
+border-radius: 12px;
+color: #fff;
+font-family: inherit;
+font-size: 15px;
+padding: 0 16px;
+outline: none;
+transition: border-color 0.2s;
+}
+
+select:focus,
+input:focus {
+border-color: #fff;
+}
+
+input::placeholder {
+color: #9aa5a5;
+}
+
+.busca {
+position: relative;
+}
+
+.busca i {
+position: absolute;
+left: 16px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 18px;
+color: #c9d0d0;
+}
+
+.busca input {
+padding-left: 46px;
+}
+
+.btn-aplicar {
+width: 55%;
+height: 56px;
+background: #fff;
+color: #111;
+border: none;
+border-radius: 12px;
+font-family: inherit;
+font-size: 17px;
+font-weight: 700;
+cursor: pointer;
+transition:
+transform 0.15s,
+background 0.2s;
+}
+
+.btn-aplicar:hover {
+background: #f1f1f1;
+transform: translateY(-2px);
+}
+
+.btn-limpar {
+background: none;
+border: none;
+color: #d6dcdc;
+font-family: inherit;
+font-size: 14px;
+cursor: pointer;
+text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+.card {
+padding: 26px 22px 34px;
+border-radius: 26px;
+}
+.linha {
+grid-template-columns: 1fr;
+gap: 0;
+}
+.btn-aplicar {
+width: 100%;
+}
+}

@@ -1,138 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demandas | AACD</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="../../css/menu/painel.css">
-    <link rel="stylesheet" href="../../css/menu/demandas.css">
-    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demandas | AACD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="../../css/menu/central.css">
+  <link rel="stylesheet" href="../../css/menu/painel-cards.css">
+  <link rel="stylesheet" href="../../css/menu/demandas.css">
+  <link rel="stylesheet" href="../../css/menu/menu-base.css">
+  <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+<script src="../../js/menu/usuario-sessao.js" defer></script>
 </head>
 
 <body>
-
-    <div class="background">
-
-        <header class="cabecalho">
-            <div class="retanguloFifa">
-                <div class="perfilInformacoes">
-                    <strong>Olá, [Nome do Usuário]</strong>
-                    <span>Medico</span>
-                </div>
-                <div class="perfilPonta">MD</div>
-            </div>
-
-            <div class="acoesPerfil">
-                <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
-                <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg"
-                    alt="Logo do Instituto Mauá de Tecnologia">
-            </div>
-        </header>
-
-        <nav class="barradomenu" aria-label="Menu principal">
-            <a class="aba" href="central.html" aria-current="page">Central</a>
-            <a class="aba ativa" href="demandas.html">Demandas</a>
-            <a class="aba" href="impressoras.html">Impressoras</a>
-            <a class="aba" href="producao.html">Produção</a>
-            <a class="aba" href="historico.html">Histórico</a>
-        </nav>
-
-        <div class="conteudo">
-
-            <header class="tituloPagina">
-                <h1>Demandas</h1>
-                <p>Visualize e gerencie as solicitações de impressão recebidas.</p>
-            </header>
-
-            <main class="painelDemandas">
-
-                <form class="colunaFiltros" id="formFiltrosDemandas">
-                    <div class="tituloSecao">
-                        <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
-                            <circle cx="12" cy="6" r="3" />
-                            <circle cx="5" cy="8" r="2.3" />
-                            <circle cx="19" cy="8" r="2.3" />
-                            <path d="M6 20v-3a6 6 0 0 1 12 0v3z" />
-                            <path d="M1 19v-2a4 4 0 0 1 4.6-4A7.5 7.5 0 0 0 4.5 17v2zM23 19v-2a4 4 0 0 0-4.6-4 7.5 7.5 0 0 1 1.1 4v2z" />
-                        </svg>
-                        <div>
-                            <h2>Filtros</h2>
-                            <p>Refine sua busca pelas demandas.</p>
-                        </div>
-                    </div>
-
-                    <div class="campo">
-                        <label for="periodo">Período</label>
-                        <select class="selecao comIcone" id="periodo" name="periodo">
-                            <option value="">Selecione um período</option>
-                            <option value="7">Últimos 7 dias</option>
-                            <option value="30">Últimos 30 dias</option>
-                            <option value="90">Últimos 90 dias</option>
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <span class="rotulo" id="rotuloStatus">Status</span>
-                        <div class="opcoesStatus" role="group" aria-labelledby="rotuloStatus">
-                            <button class="ativa" type="button" data-status="">Todos</button>
-                            <button type="button" data-status="PENDENTE">Pendente</button>
-                            <button type="button" data-status="EM_PRODUCAO">Em Produção</button>
-                            <button type="button" data-status="CONCLUIDA">Concluída</button>
-                            <button type="button" data-status="CANCELADA">Cancelada</button>
-                        </div>
-                    </div>
-
-                    <div class="campo">
-                        <label for="categoria">Categoria da demanda</label>
-                        <select class="selecao" id="categoria" name="categoria">
-                            <option value="">Selecione uma categoria</option>
-                            <option value="Prótese Modular">Prótese Modular</option>
-                            <option value="Prótese Definitiva">Prótese Definitiva</option>
-                            <option value="Prótese Parcial">Prótese Parcial</option>
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <label for="solicitante">Solicitante</label>
-                        <input class="entrada comIcone" id="solicitante" name="solicitante" type="search" placeholder="Nome da pessoa ou instituição">
-                    </div>
-
-                    <button class="botaoAplicar" type="submit">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M3 4h18l-7 8.5V20l-4-2v-5.5z" />
-                        </svg>
-                        Aplicar Filtros
-                    </button>
-                </form>
-
-                <section class="colunaLista">
-                    <div class="tituloSecao">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="3" y="1.5" width="18" height="21" rx="3" fill="white" />
-                            <path d="M7 7h10M7 11h10M7 15h10M7 19h6" stroke="#5c0610" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                        <div>
-                            <h2>Lista de Demandas</h2>
-                            <p>Acompanhe o status das solicitações de impressão.</p>
-                        </div>
-                    </div>
-
-                    <ul class="listaDemandas" id="listaDemandas"></ul>
-
-                    <div class="rodapeLista">
-                        <p class="contagem" id="contagemDemandas"></p>
-                        <div class="paginacao" id="paginacaoDemandas"></div>
-                    </div>
-                </section>
-
-            </main>
+  <div class="background">
+    <header class="cabecalho">
+      <div class="retanguloFifa">
+        <div class="perfilInformacoes">
+          <strong><a class="nomeUsuario" data-usuario-nome aria-live="polite">Carregando usuário...</a></strong>
         </div>
+        <div class="perfilPonta" data-usuario-iniciais aria-label="Iniciais do usuário">…</div>
+      </div>
+
+      <div class="acoesPerfil">
+        <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
+        <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg" alt="Logo do Instituto Mauá de Tecnologia">
+      </div>
+
+    </header>
+    <nav class="barradomenu" aria-label="Menu principal">
+      <a class="aba" href="central.html">Central</a>
+      <a class="aba ativa" aria-current="page" href="demandas.html">Demandas</a>
+      <a class="aba" href="impressoras.html">Impressoras</a>
+      <a class="aba" href="producao.html">Produção</a>
+      <a class="aba" href="historico.html">Histórico</a>
+    </nav>
+    <div class="painelMenu">
+      <p class="avisoExemplo">Prévia com dados de exemplo.</p>
+
+      <main class="grade">
+        <section class="resumo">
+          <h2>Resumo das demandas</h2>
+          <p class="sub"><span id="total">15</span> solicitações registradas</p>
+
+          <div class="status-item">
+            <div class="status-topo">
+              <span>Pendente</span><strong id="qtd-pendente">4</strong>
+            </div>
+            <div class="barra">
+              <span class="pendente" id="barra-pendente"></span>
+            </div>
+          </div>
+          <div class="status-item">
+            <div class="status-topo">
+              <span>Em produção</span><strong id="qtd-producao">6</strong>
+            </div>
+            <div class="barra">
+              <span class="producao" id="barra-producao"></span>
+            </div>
+          </div>
+          <div class="status-item">
+            <div class="status-topo">
+              <span>Concluída</span><strong id="qtd-concluida">3</strong>
+            </div>
+            <div class="barra">
+              <span class="concluida" id="barra-concluida"></span>
+            </div>
+          </div>
+          <div class="status-item">
+            <div class="status-topo">
+              <span>Cancelada</span><strong id="qtd-cancelada">2</strong>
+            </div>
+            <div class="barra">
+              <span class="cancelada" id="barra-cancelada"></span>
+            </div>
+          </div>
+
+          <p class="recente">
+            Mais recente: <strong>Impressão de próteses modulares</strong> ·
+            AACD · 27/10/2025
+          </p>
+        </section>
+        <section class="acoes">
+          <a href="demandas-filtros.html" class="card-acao">
+            <span class="icone"><i class="ti ti-filter"></i></span>
+            <div>
+              <h3>Filtros</h3>
+              <p>Refine por período, status, categoria e solicitante</p>
+            </div>
+          </a>
+          <a href="demandas-lista.html" class="card-acao">
+            <span class="icone"><i class="ti ti-list-details"></i></span>
+            <div>
+              <h3>Lista de demandas</h3>
+              <p>Acompanhe o status das solicitações</p>
+            </div>
+          </a>
+        </section>
+      </main>
     </div>
 
-    <script src="../../js/menu/utilitarios.js"></script>
-    <script src="../../js/menu/demandas.js"></script>
+
+  </div>
+  <script src="../../js/menu/menu-dados.js"></script>
+  <script src="../../js/menu/demandas.js"></script>
 </body>
 
 </html>

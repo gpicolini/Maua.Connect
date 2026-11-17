@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitar prótese | AACD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="../../css/menu/tela-funcao.css">
+  <link rel="stylesheet" href="../../css/menu/producao-solicitar.css">
+  <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+  <main class="card">
+    <a href="producao.html" class="voltar">← Voltar à produção</a>
+
+    <header class="cabecalho">
+      <div class="logos">
+        <img class="aacd" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="AACD" />
+        <span class="divisor"></span>
+        <img class="maua" src="../../imagens/inicio/logos/logo-maua.svg" alt="Instituto Mauá de Tecnologia" />
+      </div>
+      <span class="tag">PRODUÇÃO</span>
+      <h1>Solicitar prótese</h1>
+      <p>Preencha os dados da prótese desejada para solicitar a impressão:</p>
+    </header>
+
+    <form id="formSolicitarProtese" novalidate>
+      <fieldset>
+        <legend>DADOS DA PRÓTESE</legend>
+        <div class="linha">
+          <div>
+            <label for="categoria">Categoria da prótese <span class="obrigatorio">*</span></label>
+            <select id="categoria" name="categoria" required>
+              <option value="" selected disabled>Selecione uma categoria</option>
+              <option value="TRANSFEMORAL">Transfemoral</option>
+              <option value="TRANSTIBIAL">Transtibial</option>
+              <option value="MEMBRO_SUPERIOR">Membro superior</option>
+              <option value="MAO_DEDOS">Mão / dedos</option>
+            </select>
+
+          </div>
+          <div>
+            <label for="tipo">Tipo de prótese <span class="obrigatorio">*</span></label>
+            <select id="tipo" name="tipo" required>
+              <option value="" selected disabled>Selecione o tipo</option>
+              <option value="MODULAR">Prótese Modular</option>
+              <option value="DEFINITIVA">Prótese Definitiva</option>
+              <option value="PARCIAL">Prótese Parcial</option>
+            </select>
+
+          </div>
+        </div>
+        <div class="linha">
+          <div>
+            <label for="lado">Lado de uso <span class="obrigatorio">*</span></label>
+            <select id="lado" name="lado" required>
+              <option value="" selected disabled>Selecione o lado</option>
+              <option value="DIREITO">Direito</option>
+              <option value="ESQUERDO">Esquerdo</option>
+              <option value="BILATERAL">Bilateral</option>
+            </select>
+
+          </div>
+          <div>
+            <label for="faixaEtaria">Faixa etária indicada <span class="obrigatorio">*</span></label>
+            <select id="faixaEtaria" name="faixaEtaria" required>
+              <option value="" selected disabled>Selecione a faixa etária</option>
+              <option value="INFANTIL">Infantil (0 a 12 anos)</option>
+              <option value="ADOLESCENTE">Adolescente (13 a 17 anos)</option>
+              <option value="ADULTO">Adulto (18 a 59 anos)</option>
+              <option value="IDOSO">Idoso (60+ anos)</option>
+            </select>
+
+          </div>
+        </div>
+        <label for="descricao">Descrição da prótese <span class="obrigatorio">*</span></label>
+        <textarea id="descricao" name="descricao" minlength="10" maxlength="500"
+          placeholder="Descreva o objetivo, funcionalidades e características principais da prótese..."></textarea>
+        <div class="contador"><span id="contadorDescricao">0/500</span></div>
+
+      </fieldset>
+
+      <div class="botoes">
+        <button type="submit" class="btn-principal botaoPrincipal">
+          Finalizar pedido <i class="ti ti-chevron-right"></i>
+        </button>
+      </div>
+      <p class="mensagem" id="mensagemSolicitacao" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+
+  <script src="../../js/menu/menu-dados.js"></script>
+  <script src="../../js/menu/producao-solicitar.js"></script>
+</body>
+
+</html>

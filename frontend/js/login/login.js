@@ -1,6 +1,8 @@
-const botao = document.querySelector(".botaoLogar");
+const botao = document.querySelector(".botaoEntrar");
 
 botao.addEventListener ("click" , async () => {
+        const campos = [...document.querySelectorAll('.campoLogin')];
+        if (!campos.every(campo => campo.reportValidity())) return;
         const dadosLogin = {
         email: document.querySelector('[name="email"]').value.trim(),
         senha: document.querySelector('[name="senha"]').value,
@@ -9,8 +11,9 @@ botao.addEventListener ("click" , async () => {
         botao.disabled = true;
         
     try {
-        const resposta = await fetch("http://localhost:8082/api/entrada/login",
+        const resposta = await fetch(`http://${window.location.hostname}:8082/api/entrada/login`,
         {
+            credentials: "include",
             method: "POST",
             headers: {"content-Type": "application/json"},
             body: JSON.stringify(dadosLogin)
@@ -36,7 +39,8 @@ botao.addEventListener ("click" , async () => {
 
     } catch (erro) {
 
-console.error ("Algo deu erro, tente novamente em instantes" , erro);
+console.error ("Falha ao acessar a API", erro);
+alert("Não foi possível acessar o servidor. Confira se o backend está ligado.");
 }
 
 finally {

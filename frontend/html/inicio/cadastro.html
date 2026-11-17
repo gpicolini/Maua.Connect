@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/inicio/cadastro.css">
     <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
     <script src="../../js/cadastro/cadastro.js" defer></script>
+<script src="../../js/inicio/senha-visivel.js" defer></script>
 </head>
 
 
@@ -33,20 +34,20 @@
 
             <div class="campoComIcone">
                 <img class="iconeCampo" src="../../imagens/inicio/icones/icone-nome.svg" alt="Icone campo">
-                <input class="campoLogin" type="text" name="nome" placeholder="Nome" autocomplete="name">
+                <input class="campoLogin" type="text" name="nome" placeholder="Nome" autocomplete="name" required>
             </div>
 
             <div class="campoComIcone">
                 <img class="iconeCampo" src="../../imagens/inicio/icones/icone-email.svg" alt="">
-                <input class="campoLogin" type="email" name="email" placeholder="E-mail" autocomplete="email">
+                <input class="campoLogin" type="email" name="email" placeholder="E-mail" autocomplete="email" required>
             </div>
 
 
             <div class="campoComIcone">
                 <img class="iconeCampo" src="../../imagens/inicio/icones/icone-cadeado.svg" alt="">
-                <input class="campoLogin" type="password" name="senha" placeholder="Senha" autocomplete="new-password">
+                <input class="campoLogin" type="password" name="senha" placeholder="Senha" autocomplete="new-password" minlength="8" required>
                 <button class="botaoOlho" type="button" aria-label="Mostrar senha">
-                    <img src="../../imagens/inicio/icones/icone-olho.svg" alt="">
+                    <img src="../../imagens/inicio/icones/icone-olho-fechado.svg" alt="">
                 </button>
             </div>
 
@@ -54,9 +55,9 @@
             <div class="campoComIcone">
                 <img class="iconeCampo" src="../../imagens/inicio/icones/icone-cadeado.svg" alt="">
                 <input class="campoLogin" type="password" name="confirmarSenha" placeholder="Confirmar senha"
-                    autocomplete="new-password">
+                    autocomplete="new-password" minlength="8" required>
                 <button class="botaoOlho" type="button" aria-label="Mostrar confirmação de senha">
-                    <img src="../../imagens/inicio/icones/icone-olho.svg" alt="">
+                    <img src="../../imagens/inicio/icones/icone-olho-fechado.svg" alt="">
                 </button>
             </div>
 
