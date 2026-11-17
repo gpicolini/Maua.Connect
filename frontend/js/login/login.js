@@ -9,7 +9,7 @@ botao.addEventListener ("click" , async () => {
         botao.disabled = true;
         
     try {
-        const resposta = await fetch("http://localhost:8083/api/entrada/login",
+        const resposta = await fetch("http://localhost:8082/api/entrada/login",
         {
             method: "POST",
             headers: {"content-Type": "application/json"},
