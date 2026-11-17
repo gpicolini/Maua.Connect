@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressoras | AACD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/menu/painel.css">
+    <link rel="stylesheet" href="../../css/menu/impressoras.css">
+    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="conteudo">
+
+            <header class="cabecalho">
+                <div class="acoesPerfil">
+                    <button class="hamburguer" type="button" aria-label="Abrir menu">
+                        <img src="../../imagens/menu/icones/hamburger.svg" alt="">
+                    </button>
+                    <div class="logos">
+                        <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
+                        <span class="divisor"></span>
+                        <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg" alt="Logo do Instituto Mauá de Tecnologia">
+                    </div>
+                </div>
+
+                <div class="perfil">
+                    <div class="perfilInformacoes">
+                        <strong>Olá, [Nome do Usuário]</strong>
+                        <span>AACD</span>
+                    </div>
+                    <div class="perfilPonta">MD</div>
+                </div>
+            </header>
+
+            <nav class="barraDoMenu" aria-label="Menu principal">
+                <a class="aba" href="central.html">Central</a>
+                <a class="aba" href="demandas.html">Demandas</a>
+                <a class="aba ativa" href="impressoras.html" aria-current="page">Impressoras</a>
+                <a class="aba" href="producao.html">Produção</a>
+                <a class="aba" href="#">Qualidade</a>
+                <a class="aba" href="historico.html">Histórico</a>
+            </nav>
+
+            <main class="cartao">
+                <div class="cartaoTopo">
+                    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                        <path d="M6 2h12v6H6z" />
+                        <path d="M4 9h16a3 3 0 0 1 3 3v6h-4v-3H5v3H1v-6a3 3 0 0 1 3-3zm14 2.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                        <path d="M6 16h12v6H6z" />
+                    </svg>
+                    <h1>Impressoras</h1>
+                </div>
+
+                <div class="cartaoCorpo">
+                    <p class="subtitulo">Confira as impressoras selecionadas para atender suas demandas.</p>
+
+                    <div class="areaImpressoras">
+                        <form class="filtrosLaterais" id="formFiltrosImpressoras">
+                            <div class="campo">
+                                <label for="status">Status da Impressora</label>
+                                <select class="selecao" id="status" name="status">
+                                    <option value="">Todos os status</option>
+                                    <option value="DISPONIVEL">Disponível</option>
+                                    <option value="EM_MANUTENCAO">Em Manutenção</option>
+                                    <option value="OFFLINE">Offline</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="categoria">Categoria</label>
+                                <select class="selecao" id="categoria" name="categoria">
+                                    <option value="">Todas as categorias</option>
+                                    <option value="Prótese Modular">Prótese Modular</option>
+                                    <option value="Prótese Definitiva">Prótese Definitiva</option>
+                                    <option value="Prótese Parcial">Prótese Parcial</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="localizacao">Localização</label>
+                                <select class="selecao" id="localizacao" name="localizacao">
+                                    <option value="">Todas as localizações</option>
+                                    <option value="Laboratório Principal">Laboratório Principal</option>
+                                    <option value="Laboratório de Pesquisa">Laboratório de Pesquisa</option>
+                                    <option value="Laboratório de Engenharia">Laboratório de Engenharia</option>
+                                </select>
+                            </div>
+
+                            <button class="botaoPrincipal" type="submit">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 12a9 9 0 1 1-2.6-6.4L21 8" />
+                                    <path d="M21 3v5h-5" />
+                                </svg>
+                                Atualizar
+                            </button>
+                        </form>
+
+                        <div>
+                            <div class="tabelaRolagem">
+                                <table class="tabela tabelaImpressoras">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome da Impressora</th>
+                                            <th>Categoria</th>
+                                            <th>Status</th>
+                                            <th>Última Impressão</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="corpoImpressoras"></tbody>
+                                </table>
+                            </div>
+
+                            <div class="rodapeLista">
+                                <p class="contagem" id="contagemImpressoras"></p>
+                                <div class="paginacao" id="paginacaoImpressoras"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="../../js/menu/utilitarios.js"></script>
+    <script src="../../js/menu/impressoras.js"></script>
+</body>
+
+</html>

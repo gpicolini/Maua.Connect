@@ -1,0 +1,51 @@
+.formularioProtese {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 26px 60px;
+}
+
+.campoInteiro {
+grid-column: 1 / -1;
+}
+
+.contadorCaracteres {
+align-self: flex-end;
+color: #68616d;
+font-size: 15px;
+}
+
+.acoesFormulario {
+grid-column: 1 / -1;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+margin-top: -10px;
+}
+
+.mensagem {
+margin: 0;
+font-size: 15px;
+font-weight: 600;
+}
+
+.mensagemErro {
+color: #c0172b;
+}
+
+.mensagemSucesso {
+color: #1f5c1a;
+}
+
+@media (max-width: 760px) {
+.formularioProtese {
+grid-template-columns: 1fr;
+gap: 20px;
+}
+
+.acoesFormulario {
+flex-direction: column-reverse;
+align-items: stretch;
+margin-top: 0;
+}
+}
