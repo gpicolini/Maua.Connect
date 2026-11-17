@@ -19,17 +19,6 @@ padding: 20px 40px;
 background: linear-gradient(135deg, #140c02 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
 }
 
-.barradomenu {
-display: flex;
-width: 45%;
-align-self: flex-start;
-margin-left: 15%;
-height: 44px;
-gap: 2px;
-margin-bottom: 14px;
-margin-top: 60px;
-}
-
 .aba {
 flex: 1;
 display: flex;
@@ -120,7 +109,7 @@ display: flex;
 width: 430px;
 height: 75px;
 flex-shrink: 0;
-transform: translatex(-150px);
+transform: translatex(650px);
 }
 
 .perfilInformacoes {
@@ -189,11 +178,12 @@ outline-offset: 4px;
 }
 
 .logoInstituicao {
-display: block;
+display: flex;
 width: 76px;
 height: 76px;
 object-fit: contain;
 flex-shrink: 0;
+transform: translateX(-800px);
 }
 
 .logoMaua {
@@ -203,7 +193,9 @@ height: 55px;
 object-fit: contain;
 flex-shrink: 0;
 filter: brightness(0) invert(1);
+transform: translateX(-790px);
 }
+
 .topoDemandas {
 display: flex;
 justify-content: flex-end;
