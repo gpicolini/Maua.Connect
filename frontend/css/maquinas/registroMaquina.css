@@ -83,8 +83,18 @@ background-color: silver;
 }
 
 .logoAacd {
-clip-path: inset(0 0 10% 0);
-transform: translateY(7px);
+object-fit: contain;
+display: block;
+}
+
+.logoMaua {
+display: flex;
+width: 140px;
+height: 55px;
+object-fit: contain;
+flex-shrink: 0;
+filter: brightness(0) invert(1);
+justify-content: flex-start
 }
 
 .etiqueta {

@@ -1,0 +1,13 @@
+@media (max-width: 760px) {
+.card {
+padding: 26px 22px 34px;
+border-radius: 26px;
+}
+.linha {
+grid-template-columns: 1fr;
+gap: 0;
+}
+.btn-principal {
+width: 100%;
+}
+}

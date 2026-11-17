@@ -471,6 +471,7 @@ height: 60px;
 
 .logoMaua {
 width: 110px;
+filter: brightness(0) invert(1);
 }
 
 .divisor {

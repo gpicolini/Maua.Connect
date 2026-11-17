@@ -1,0 +1,27 @@
+.item {
+background: #f8f1ee;
+color: #3a0610;
+border-radius: 16px;
+padding: 18px 24px;
+display: grid;
+grid-template-columns: 54px 1.5fr 1fr 1fr 1fr auto;
+gap: 18px;
+align-items: center;
+}
+
+@media (max-width: 900px) {
+.card {
+padding: 26px 18px 30px;
+border-radius: 26px;
+}
+.item {
+grid-template-columns: 1fr;
+}
+.divide {
+border: none;
+}
+.rodape {
+flex-direction: column;
+gap: 14px;
+}
+}

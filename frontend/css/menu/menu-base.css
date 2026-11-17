@@ -1,0 +1,105 @@
+/* Estrutura compartilhada com a Central. */
+.background {
+padding: 20px 32px 40px;
+}
+.cabecalho,
+.blocos,
+.painelMenu {
+width: min(100%, 1270px);
+}
+.cabecalho {
+gap: 28px;
+}
+.barradomenu {
+width: min(100%, 800px);
+align-self: auto;
+margin: 60px 0 14px;
+margin-right: max(0px, calc((min(100vw - 64px, 1270px) - 800px)));
+min-height: 44px;
+height: auto;
+}
+.aba {
+min-height: 44px;
+}
+.painelMenu *,
+.painelMenu *::before,
+.painelMenu *::after {
+box-sizing: border-box;
+}
+.painelMenu h2,
+.painelMenu h3,
+.painelMenu h4,
+.painelMenu p,
+.painelMenu dl,
+.painelMenu dd {
+margin: 0;
+}
+.painelMenu .avisoExemplo {
+margin: 0 0 12px;
+color: white;
+font-size: 12px;
+}
+.painelMenu .conteudo,
+.painelMenu .grade {
+width: 100%;
+}
+.card-acao:focus-visible,
+a:focus-visible,
+button:focus-visible {
+outline: 3px solid #f2b84b;
+outline-offset: 3px;
+}
+.blocoInferiorCentral {
+grid-area: dois;
+}
+@media (max-width: 900px) {
+.cabecalho {
+margin-top: 28px;
+flex-wrap: wrap;
+}
+.barradomenu {
+margin: 28px 0 14px;
+width: 100%;
+flex-wrap: wrap;
+}
+.aba {
+flex: 1 1 130px;
+}
+.retanguloFifa {
+max-width: 100%;
+}
+}
+@media (max-width: 560px) {
+.background {
+padding: 16px;
+}
+.cabecalho {
+flex-direction: column;
+align-items: stretch;
+}
+.acoesPerfil {
+justify-content: center;
+}
+.perfilInformacoes {
+padding: 12px;
+}
+.perfilInformacoes strong {
+font-size: 16px;
+}
+.perfilPonta {
+width: 70px;
+}
+.painelMenu .acoes,
+.painelMenu .trabalhos,
+.painelMenu .materiais,
+.painelMenu .maquinas,
+.painelMenu .numeros {
+grid-template-columns: 1fr;
+}
+.painelMenu .painel {
+padding: 20px;
+}
+.painelMenu .card-acao {
+min-height: 210px;
+}
+}
